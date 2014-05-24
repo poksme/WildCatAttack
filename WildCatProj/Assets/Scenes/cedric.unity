@@ -267,7 +267,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5900014, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
       propertyPath: m_Spring.spring
-      value: 20
+      value: 185
       objectReference: {fileID: 0}
     - target: {fileID: 5900004, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
       propertyPath: m_Spring.spring
@@ -275,11 +275,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5900000, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
       propertyPath: m_Spring.spring
-      value: 20
+      value: 185
       objectReference: {fileID: 0}
     - target: {fileID: 5900006, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
       propertyPath: m_Spring.spring
-      value: 20
+      value: 185
       objectReference: {fileID: 0}
     - target: {fileID: 5900008, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
       propertyPath: m_Spring.spring
@@ -287,7 +287,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5900002, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
       propertyPath: m_Spring.spring
-      value: 20
+      value: 185
       objectReference: {fileID: 0}
     - target: {fileID: 5900010, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
       propertyPath: m_Spring.spring
@@ -2036,7 +2036,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: -.0864473358, y: -.560851216, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 20
+    spring: 185
     damper: 0
     targetPosition: -50
   m_UseMotor: 0
@@ -3020,7 +3020,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: -.169419155, y: -.578794301, z: -3.49075918e-07}
   m_UseSpring: 1
   m_Spring:
-    spring: 20
+    spring: 185
     damper: 0
     targetPosition: -50
   m_UseMotor: 0
@@ -3253,7 +3253,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: -.169421852, y: -.578796268, z: 1.24365499e-06}
   m_UseSpring: 1
   m_Spring:
-    spring: 20
+    spring: 185
     damper: 0
     targetPosition: -50
   m_UseMotor: 0
@@ -5732,7 +5732,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: -.0864468291, y: -.560851276, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 20
+    spring: 185
     damper: 0
     targetPosition: -50
   m_UseMotor: 0

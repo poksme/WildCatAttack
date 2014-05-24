@@ -22,6 +22,7 @@ public class Dash : MonoBehaviour {
 	void Start () {
 		RigidComp = this.GetComponent<Rigidbody>();
 		Body = GameObject.FindGameObjectWithTag("Body");
+		Physics.gravity = new Vector3 (0, -30.0F, 0); // Manually change the gravity
 	}
 	
 	// Update is called once per frame
