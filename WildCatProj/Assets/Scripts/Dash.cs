@@ -2,18 +2,22 @@
 using System.Collections;
 
 public class Dash : MonoBehaviour {
-
+	
 	Rigidbody			RigidComp;
 	GameObject			Body;
 	bool				TimerActivated = false;
+	bool				leftKeyUsed = false; //To know in which direction we will dash
+	bool				rightKeyUsed = false; //To know in which direction we will dash
 	float				dashTimerCur = 0f;
-	float				tapCooler = 0.5f;
-	int					tapCount = 0;
+	float				tapLeftCooler = 0.05f;
+	float				tapRightCooler = 0.05f;
+	int					tapLeftCount = 0;
+	int					tapRightCount = 0;
 	public Rigidbody[]	rigidBodies;
 	public const float	dashTimerMax = 0.3f; //How long will we dash ?
-
-
-
+	
+	
+	
 	// Use this for initialization
 	void Start () {
 		RigidComp = this.GetComponent<Rigidbody>();
@@ -22,31 +26,40 @@ public class Dash : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		bool leftKeyUsed = false; //To know in which direction we will dash
-		if (Input.GetKeyDown("d") || (leftKeyUsed = Input.GetKeyDown("a"))) {
-			if (tapCooler > 0 && tapCount == 1) {
+		if ((leftKeyUsed = Input.GetKeyDown("a")) || (rightKeyUsed = Input.GetKeyDown("d"))) {
+			if ((tapLeftCooler > 0 && tapLeftCount == 1) || (tapRightCooler > 0 && tapRightCount == 1)) {
 				if (!TimerActivated) {
 					dashTimerCur = dashTimerMax;
-					if (leftKeyUsed)
+					if (leftKeyUsed && tapLeftCount == 1) {
 						DoDash(Vector3.left);
-					else
+						TimerActivated = true;
+					}
+					else if (rightKeyUsed && tapRightCount == 1) {
+						TimerActivated = true;
 						DoDash(Vector3.right);
-					TimerActivated = true;
+					}
 				}
 			}
 			else {
-				tapCooler = 0.5f;
-				tapCount += 1;
+				if (rightKeyUsed) {
+					tapRightCooler = 0.5f;
+					tapRightCount += 1;
+				}
+				if (leftKeyUsed) {
+					tapLeftCooler = 0.5f;
+					tapLeftCount += 1;
+				}
+				
 			}
+			leftKeyUsed = false;
+			rightKeyUsed = false;
 		} 
 		UpdateTimer();
 		//Update TapCount
-		if (tapCooler > 0)
-			tapCooler -= 1 * Time.deltaTime;
-		else 
-			tapCount = 0;
+		tapLeftCooler = (tapLeftCooler > 0) ? tapLeftCooler - 1 * Time.deltaTime : tapLeftCount = 0;
+		tapRightCooler = (tapRightCooler > 0) ? tapRightCooler - 1 * Time.deltaTime : tapRightCount = 0;
 	}
-
+	
 	void UpdateTimer() {
 		if (TimerActivated) {
 			dashTimerCur -= Time.deltaTime;
@@ -58,12 +71,12 @@ public class Dash : MonoBehaviour {
 			TimerActivated = false;
 		}
 	}
-
+	
 	void DoDash(Vector3 direction) {
 		rigidBodies = gameObject.GetComponentsInChildren<Rigidbody>();
 		foreach (Rigidbody rb in rigidBodies) {
 			rb.AddForce(direction * 15, ForceMode.Impulse);
-	}
+		}
 		// start timer
 		//this.animation.Play("Dash");
 	}
