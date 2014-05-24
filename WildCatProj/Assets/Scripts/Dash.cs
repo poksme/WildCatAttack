@@ -3,12 +3,16 @@ using System.Collections;
 
 public class Dash : MonoBehaviour {
 
-	Rigidbody	RigidComp;
-	bool TimerActivated = false;
-	private float dashTimerCur = 0f;
-	GameObject Body;
-	public Rigidbody[] rigidBodies;
-	public const float dashTimerMax = 2f;
+	Rigidbody			RigidComp;
+	GameObject			Body;
+	bool				TimerActivated = false;
+	float				dashTimerCur = 0f;
+	float				tapCooler = 0.5f;
+	int					tapCount = 0;
+	public Rigidbody[]	rigidBodies;
+	public const float	dashTimerMax = 0.3f; //How long will we dash ?
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -18,27 +22,40 @@ public class Dash : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		bool test;
-		if (Input.GetKey("a")) {
-			if (!TimerActivated) {
-				dashTimerCur = dashTimerMax;
-				DoDash(Vector3.left);
-				TimerActivated = true;
+		bool leftKeyUsed = false; //To know in which direction we will dash
+		if (Input.GetKeyDown("d") || (leftKeyUsed = Input.GetKeyDown("a"))) {
+			if (tapCooler > 0 && tapCount == 1) {
+				if (!TimerActivated) {
+					dashTimerCur = dashTimerMax;
+					if (leftKeyUsed)
+						DoDash(Vector3.left);
+					else
+						DoDash(Vector3.right);
+					TimerActivated = true;
+				}
 			}
-		} else {
-			TimerActivated = false;
-		}
+			else {
+				tapCooler = 0.5f;
+				tapCount += 1;
+			}
+		} 
 		UpdateTimer();
+		//Update TapCount
+		if (tapCooler > 0)
+			tapCooler -= 1 * Time.deltaTime;
+		else 
+			tapCount = 0;
 	}
 
 	void UpdateTimer() {
-		if (!TimerActivated) {
-			dashTimerCur += Time.deltaTime;
+		if (TimerActivated) {
+			dashTimerCur -= Time.deltaTime;
 		}
-		if (dashTimerCur > dashTimerMax) {
+		if (dashTimerCur <= 0) {
 			foreach (Rigidbody rb in rigidBodies)
 				rb.velocity = Vector3.zero;
-			dashTimerCur = 0f;
+			dashTimerCur = dashTimerMax;
+			TimerActivated = false;
 		}
 	}
 
