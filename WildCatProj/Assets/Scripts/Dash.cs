@@ -14,7 +14,8 @@ public class Dash : MonoBehaviour {
 	int					tapLeftCount = 0;
 	int					tapRightCount = 0;
 	public Rigidbody[]	rigidBodies;
-	public const float	dashTimerMax = 0.3f; //How long will we dash ?
+	public float		dashTimerMax = 0.15f; //How long will we dash ?
+	public float		dashSpeed = 30f;
 	
 	
 	
@@ -85,7 +86,7 @@ public class Dash : MonoBehaviour {
 	
 	void DoDash(Vector3 direction) {
 		foreach (Rigidbody rb in rigidBodies) {
-			rb.AddForce(direction * 15, ForceMode.Impulse);
+			rb.AddForce(direction * dashSpeed, ForceMode.Impulse);
 		}
 		// start timer
 		//this.animation.Play("Dash");
