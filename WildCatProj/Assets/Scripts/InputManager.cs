@@ -35,6 +35,16 @@ public class InputManager : MonoBehaviour {
 	public Direction DoubleTapDirection {
 		get { return _doubleTapedDirection; }
 	}
+
+	public Vector3 DoubleTapVector {
+		get { 
+			if (_doubleTapedDirection == Direction.Left)
+				return Vector3.left;
+			if (_doubleTapedDirection == Direction.Right)
+				return Vector3.right;
+			return Vector3.zero;
+		}
+	}
 	
 	// Use this for initialization
 	void Start () {

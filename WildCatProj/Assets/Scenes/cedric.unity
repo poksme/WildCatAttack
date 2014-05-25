@@ -1306,7 +1306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce93089c4eff0641aa168f6a553597c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBodies: []
+  dashTimerMax: .300000012
+  dashStrength: 15
 --- !u!114 &386793584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1508,7 +1509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce93089c4eff0641aa168f6a553597c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBodies: []
+  dashTimerMax: .300000012
+  dashStrength: 15
 --- !u!111 &477574150
 Animation:
   m_ObjectHideFlags: 0
