@@ -10,13 +10,13 @@ public class Push : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 
-	void OnCollisionEnter(Collision collision) {
-		if (collision.gameObject.tag.Equals("Body")){
-			Debug.Log ("Salut je suis une fonction");
-			collision.rigidbody.AddForce(this.rigidbody.velocity * 1000f);
+	void OnCollisionInChildren(Collision collision) {
+		if (collision.collider.gameObject.tag.Equals("Player2")) { // Need a more generic
+			if (collision.collider.rigidbody) // The feet don't have rigidbody this can be a problem
+				collision.collider.rigidbody.AddForce(collision.rigidbody.velocity * 10f, ForceMode.Impulse);
 		}
 	}
 }

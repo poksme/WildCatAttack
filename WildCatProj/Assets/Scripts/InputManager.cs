@@ -32,6 +32,14 @@ public class InputManager : MonoBehaviour {
 		get { return _rightButtonPressed; } 
 	}
 
+	public bool RightButtonUnrealised {
+		get { return Input.GetKey(_rightButtonKey); }
+	}
+
+	public bool LeftButtonUnrealised {
+		get { return Input.GetKey(_leftButtonKey); }
+	}
+
 	public Direction DoubleTapDirection {
 		get { return _doubleTapedDirection; }
 	}

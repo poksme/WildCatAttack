@@ -52,7 +52,9 @@ public class Dash : MonoBehaviour {
 
 	// Set the velocity to 0 to all the children rigidbodies
 	void StopDash() {
-		foreach (Rigidbody rb in rigidBodies)
-			rb.velocity = Vector3.zero;
+		foreach (Rigidbody rb in rigidBodies) {
+			if (!rb.isKinematic)
+				rb.velocity = Vector3.zero;
+		}
 	}
 }
