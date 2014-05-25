@@ -5,6 +5,8 @@ TagManager:
   tags:
   - 
   - Body
+  - Player1
+  - Player2
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

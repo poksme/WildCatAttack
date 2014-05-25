@@ -2,15 +2,15 @@
 using System.Collections;
 
 public class Dash : MonoBehaviour {
-	
-	Rigidbody			RigidComp;
+
 	GameObject			Body;
+	Rigidbody			BodyRigidComp;
 	bool				TimerActivated = false;
 	bool				leftKeyUsed = false; //To know in which direction we will dash
 	bool				rightKeyUsed = false; //To know in which direction we will dash
 	float				dashTimerCur = 0f;
-	float				tapLeftCooler = 0.05f;
-	float				tapRightCooler = 0.05f;
+	float				tapLeftCooler = 0.04f;
+	float				tapRightCooler = 0.04f;
 	int					tapLeftCount = 0;
 	int					tapRightCount = 0;
 	public Rigidbody[]	rigidBodies;
@@ -20,14 +20,16 @@ public class Dash : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		RigidComp = this.GetComponent<Rigidbody>();
 		Body = GameObject.FindGameObjectWithTag("Body");
 		Physics.gravity = new Vector3 (0, -30.0F, 0); // Manually change the gravity
+		rigidBodies = gameObject.GetComponentsInChildren<Rigidbody>();
+		BodyRigidComp = Body.GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if ((leftKeyUsed = Input.GetKeyDown("a")) || (rightKeyUsed = Input.GetKeyDown("d"))) {
+			Debug.Log ("left : " + tapLeftCount + " right : " + tapRightCount);
 			if ((tapLeftCooler > 0 && tapLeftCount == 1) || (tapRightCooler > 0 && tapRightCount == 1)) {
 				if (!TimerActivated) {
 					dashTimerCur = dashTimerMax;
@@ -59,8 +61,16 @@ public class Dash : MonoBehaviour {
 		//Update TapCount
 		tapLeftCooler = (tapLeftCooler > 0) ? tapLeftCooler - 1 * Time.deltaTime : tapLeftCount = 0;
 		tapRightCooler = (tapRightCooler > 0) ? tapRightCooler - 1 * Time.deltaTime : tapRightCount = 0;
+
+		//Power of the Dash
+//		if (TimerActivated) {
+//				BodyRigidComp.rigidbody.mass = 90000f;
+//		}
+//		else {
+//			BodyRigidComp.rigidbody.mass = 1f;
+//		}
 	}
-	
+
 	void UpdateTimer() {
 		if (TimerActivated) {
 			dashTimerCur -= Time.deltaTime;
@@ -74,7 +84,6 @@ public class Dash : MonoBehaviour {
 	}
 	
 	void DoDash(Vector3 direction) {
-		rigidBodies = gameObject.GetComponentsInChildren<Rigidbody>();
 		foreach (Rigidbody rb in rigidBodies) {
 			rb.AddForce(direction * 15, ForceMode.Impulse);
 		}
