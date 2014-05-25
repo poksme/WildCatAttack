@@ -18,8 +18,6 @@ public class Dash : MonoBehaviour {
 	void Start () {
 		rigidBodies = gameObject.GetComponentsInChildren<Rigidbody>();
 		inputMngr = GetComponent<InputManager>();
-		// Need to move this to a more general script
-		Physics.gravity = new Vector3 (0, -30.0F, 0); // Manually change the gravity
 	}
 
 	private void StartDashTimer() {

@@ -590,13 +590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b240b2385257c85488fb308fad59b2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shoulders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Elbows: []
-  force: 1000
 --- !u!1 &127785270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,9 +1285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b240b2385257c85488fb308fad59b2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shoulders: []
-  Elbows: []
-  force: 500
 --- !u!114 &386793583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1538,13 +1528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b240b2385257c85488fb308fad59b2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shoulders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Elbows: []
-  force: 1000
 --- !u!1 &532627645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,9 +3103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b240b2385257c85488fb308fad59b2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shoulders: []
-  Elbows: []
-  force: 1000
 --- !u!4 &1283096480
 Transform:
   m_ObjectHideFlags: 0
