@@ -325,7 +325,76 @@ Prefab:
       propertyPath: m_Name
       value: CrabeShape2p
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 100026, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400012, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400004, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400014, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400016, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400008, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400006, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400010, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400002, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400008, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
   m_RootGameObject: {fileID: 1123949422}
   m_IsPrefabParent: 0
@@ -345,7 +414,7 @@ GameObject:
   - 59: {fileID: 175606150}
   m_Layer: 0
   m_Name: BackArm
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,7 +559,7 @@ GameObject:
   - 4: {fileID: 346131723}
   m_Layer: 0
   m_Name: RightSide
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -965,7 +1034,44 @@ Prefab:
       propertyPath: m_Name
       value: CrabeShape1p
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5400014, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400016, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400006, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400002, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400008, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400010, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400004, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400012, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400008, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
   m_RootGameObject: {fileID: 386793580}
   m_IsPrefabParent: 0
@@ -1082,7 +1188,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0864473358, y: -.560851216, z: 0}
+  m_ConnectedAnchor: {x: -.0864473283, y: -.560851216, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -1475,7 +1581,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.086445339, y: -.560851276, z: 0}
+  m_ConnectedAnchor: {x: -.0864453465, y: -.560851336, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -1687,7 +1793,7 @@ GameObject:
   - 114: {fileID: 1123949424}
   m_Layer: 0
   m_Name: CrabeShape2p
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1778,7 +1884,7 @@ GameObject:
   - 59: {fileID: 1129618277}
   m_Layer: 0
   m_Name: FrontArm
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1893,7 +1999,7 @@ GameObject:
   - 4: {fileID: 1172172511}
   m_Layer: 0
   m_Name: LeftSide
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2100,7 +2206,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169419155, y: -.578794301, z: -3.49075918e-07}
+  m_ConnectedAnchor: {x: -.169419169, y: -.578794301, z: -3.49064607e-07}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -2404,7 +2510,6 @@ GameObject:
   - 65: {fileID: 1416267636}
   - 54: {fileID: 1416267635}
   - 59: {fileID: 1416267634}
-  - 114: {fileID: 1416267633}
   m_Layer: 0
   m_Name: BackForeArm
   m_TagString: Untagged
@@ -2424,18 +2529,6 @@ Transform:
   m_Children:
   - {fileID: 784855315}
   m_Father: {fileID: 273033653}
---- !u!114 &1416267633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: e8a8eaeb3494ac2409617683e913829d,
-    type: 2}
-  m_PrefabInternal: {fileID: 609339031}
-  m_GameObject: {fileID: 1416267631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 975cb2b26cb34cf4d80e8e5726a633d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!59 &1416267634
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -2447,7 +2540,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169421852, y: -.578796268, z: 1.24365499e-06}
+  m_ConnectedAnchor: {x: -.169421867, y: -.578796268, z: 1.24389055e-06}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -2607,10 +2700,9 @@ GameObject:
   - 65: {fileID: 1775575966}
   - 54: {fileID: 1775575965}
   - 59: {fileID: 1775575964}
-  - 114: {fileID: 1775575963}
   m_Layer: 0
   m_Name: BackForeArm
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2627,18 +2719,6 @@ Transform:
   m_Children:
   - {fileID: 1383052439}
   m_Father: {fileID: 346131723}
---- !u!114 &1775575963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 0d929155c80cb94448ddfaaf5fe27ed7,
-    type: 2}
-  m_PrefabInternal: {fileID: 142850222}
-  m_GameObject: {fileID: 1775575961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 975cb2b26cb34cf4d80e8e5726a633d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!59 &1775575964
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -2650,7 +2730,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169421852, y: -.578796268, z: 1.24365499e-06}
+  m_ConnectedAnchor: {x: -.169421867, y: -.578796268, z: 1.24389055e-06}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -2861,7 +2941,7 @@ GameObject:
   - 54: {fileID: 1830786094}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Body
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2979,7 +3059,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169420168, y: -.57879436, z: -3.55159699e-07}
+  m_ConnectedAnchor: {x: -.169420183, y: -.57879436, z: -3.55088616e-07}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -3144,7 +3224,7 @@ GameObject:
   - 59: {fileID: 2099919583}
   m_Layer: 0
   m_Name: FrontForeArm
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3172,7 +3252,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0864468291, y: -.560851276, z: 0}
+  m_ConnectedAnchor: {x: -.0864468366, y: -.560851276, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -3413,7 +3493,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0864468291, y: -.560851276, z: 0}
+  m_ConnectedAnchor: {x: -.0864468366, y: -.560851276, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185

@@ -14,9 +14,11 @@ public class Push : MonoBehaviour {
 	}
 
 	void OnCollisionInChildren(Collision collision) {
-		if (collision.collider.gameObject.tag.Equals("Player2")) { // Need a more generic
+		if ((transform.CompareTag("Player1") && collision.collider.gameObject.tag.Equals("Player2")) || 
+		    (transform.CompareTag("Player2") && collision.collider.gameObject.tag.Equals("Player1"))) { // Need to check if in dash state
+			Debug.Log("Touch player2");
 			if (collision.collider.rigidbody) // The feet don't have rigidbody this can be a problem
-				collision.collider.rigidbody.AddForce(collision.rigidbody.velocity * 10f, ForceMode.Impulse);
+				collision.collider.rigidbody.AddForce(collision.rigidbody.velocity * 5f, ForceMode.Impulse);
 		}
 	}
 }
