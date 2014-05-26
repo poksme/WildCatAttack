@@ -14,6 +14,12 @@ public class Dash : MonoBehaviour {
 	private InputManager inputMngr;
 	private Rigidbody[]	rigidBodies;
 
+	public bool IsDashing {
+		get {
+			return dashTimerIsActive;
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		rigidBodies = gameObject.GetComponentsInChildren<Rigidbody>();

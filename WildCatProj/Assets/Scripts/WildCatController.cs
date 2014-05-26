@@ -9,9 +9,14 @@ public class WildCatController : MonoBehaviour {
 	[SerializeField]private HingeJoint rightBackHinge;
 	private InputManager inputMngr;
 	private Rigidbody[]	rigidBodies;
+	private SoundChannelManager scm;
+	public AudioClip hitSFX;
+	public AudioClip flySFX;
+	public AudioClip lowHitSFX;
 
 	// Use this for initialization
 	void Start () {
+		scm = SoundChannelManager.GetInstance();
 		Physics.gravity = new Vector3 (0, -30.0F, 0); // Manually change the gravity
 		inputMngr = GetComponent<InputManager>();
 		rigidBodies = gameObject.GetComponentsInChildren<Rigidbody>();

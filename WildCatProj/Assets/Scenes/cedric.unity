@@ -393,6 +393,18 @@ Prefab:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: lowHitSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 3afbf66d1f84e4d4990a39975a3e2081, type: 3}
+    - target: {fileID: 11400006, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: hitSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: f17801d1aabe8d04f8646d8320e598be, type: 3}
+    - target: {fileID: 11400006, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: flySFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 41904f85d2ff92a4a970887ce0ba7f7d, type: 3}
     m_RemovedComponents:
     - {fileID: 11400008, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
@@ -700,6 +712,9 @@ MonoBehaviour:
   leftBackHinge: {fileID: 1308802069}
   rightFrontHinge: {fileID: 2119118056}
   rightBackHinge: {fileID: 1416267634}
+  hitSFX: {fileID: 8300000, guid: f17801d1aabe8d04f8646d8320e598be, type: 3}
+  flySFX: {fileID: 8300000, guid: 41904f85d2ff92a4a970887ce0ba7f7d, type: 3}
+  lowHitSFX: {fileID: 8300000, guid: 3afbf66d1f84e4d4990a39975a3e2081, type: 3}
 --- !u!114 &386793583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,6 +1085,18 @@ Prefab:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: hitSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: f17801d1aabe8d04f8646d8320e598be, type: 3}
+    - target: {fileID: 11400000, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: flySFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 41904f85d2ff92a4a970887ce0ba7f7d, type: 3}
+    - target: {fileID: 11400000, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: lowHitSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 3afbf66d1f84e4d4990a39975a3e2081, type: 3}
     m_RemovedComponents:
     - {fileID: 11400008, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
@@ -1188,7 +1215,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0864473283, y: -.560851216, z: 0}
+  m_ConnectedAnchor: {x: -.0864473358, y: -.560851216, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -1581,7 +1608,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0864453465, y: -.560851336, z: 0}
+  m_ConnectedAnchor: {x: -.086445339, y: -.560851276, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -1828,6 +1855,9 @@ MonoBehaviour:
   leftBackHinge: {fileID: 2023793972}
   rightFrontHinge: {fileID: 2099919583}
   rightBackHinge: {fileID: 1775575964}
+  hitSFX: {fileID: 8300000, guid: f17801d1aabe8d04f8646d8320e598be, type: 3}
+  flySFX: {fileID: 8300000, guid: 41904f85d2ff92a4a970887ce0ba7f7d, type: 3}
+  lowHitSFX: {fileID: 8300000, guid: 3afbf66d1f84e4d4990a39975a3e2081, type: 3}
 --- !u!114 &1123949425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2206,7 +2236,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169419169, y: -.578794301, z: -3.49064607e-07}
+  m_ConnectedAnchor: {x: -.169419155, y: -.578794301, z: -3.49075918e-07}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -2540,7 +2570,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169421867, y: -.578796268, z: 1.24389055e-06}
+  m_ConnectedAnchor: {x: -.169421852, y: -.578796268, z: 1.24365499e-06}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -2730,7 +2760,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169421867, y: -.578796268, z: 1.24389055e-06}
+  m_ConnectedAnchor: {x: -.169421852, y: -.578796268, z: 1.24365499e-06}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -3059,7 +3089,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169420183, y: -.57879436, z: -3.55088616e-07}
+  m_ConnectedAnchor: {x: -.169420168, y: -.57879436, z: -3.55159699e-07}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -3252,7 +3282,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0864468366, y: -.560851276, z: 0}
+  m_ConnectedAnchor: {x: -.0864468291, y: -.560851276, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -3493,7 +3523,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0864468366, y: -.560851276, z: 0}
+  m_ConnectedAnchor: {x: -.0864468291, y: -.560851276, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
