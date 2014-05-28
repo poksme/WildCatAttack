@@ -13,10 +13,17 @@ public class Dash : MonoBehaviour {
 	[SerializeField] private float dashStrength = 15f;
 	private InputManager inputMngr;
 	private Rigidbody[]	rigidBodies;
+	private InputManager.Direction dashingDirection = InputManager.Direction.None;
 
 	public bool IsDashing {
 		get {
 			return dashTimerIsActive;
+		}
+	}
+
+	public InputManager.Direction DashingDirections {
+		get {
+			return dashingDirection;
 		}
 	}
 
@@ -36,6 +43,7 @@ public class Dash : MonoBehaviour {
 			dashTimerCur += Time.deltaTime;
 			if (dashTimerCur > dashTimerMax) {
 				dashTimerIsActive = false;
+				dashingDirection = InputManager.Direction.None;
 				StopDash();
 			}
 		}
@@ -47,6 +55,7 @@ public class Dash : MonoBehaviour {
 		if (!dashTimerIsActive && inputMngr.DoubleTapDirection != InputManager.Direction.None) {
 			StartDashTimer();
 			StartDash(inputMngr.DoubleTapVector);
+			dashingDirection = inputMngr.DoubleTapDirection;
 		}
 	}
 

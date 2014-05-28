@@ -22,7 +22,7 @@ public class Push : MonoBehaviour {
 				// The feet don't have rigidbody this can be a problem 
 				SoundChannelManager.GetInstance().PlayClipAtPoint(me.GetComponent<WildCatController>().hitSFX, collision.transform);
 				SoundChannelManager.GetInstance().PlayClipAtPoint(me.GetComponent<WildCatController>().flySFX, collision.transform);
-				collision.collider.rigidbody.AddForce(collision.rigidbody.velocity * 5f, ForceMode.Impulse);
+				collision.collider.rigidbody.AddForce(collision.rigidbody.velocity + (me.GetComponent<Dash>().DashingDirections == InputManager.Direction.Left ? Vector3.left : Vector3.right) * 15f, ForceMode.Impulse);
 			} else {
 				SoundChannelManager.GetInstance().PlayClipAtPoint(me.GetComponent<WildCatController>().lowHitSFX, collision.transform);
 			}
