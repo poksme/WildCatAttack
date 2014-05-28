@@ -33,6 +33,11 @@ public class WildCatController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		UpdateHingeJoints();
+		// FOR DEBUG PURPOSE
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Application.LoadLevel (Application.loadedLevel);
+		}
+		// FOR DEBUG PURPOSE
 	}
 
 	private void UpdateHingeJoints() {
