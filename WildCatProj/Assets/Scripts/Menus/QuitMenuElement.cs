@@ -3,13 +3,56 @@ using System.Collections;
 
 public class QuitMenuElement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	//public attributes
+	public	Transform	AnimationCameraAnchor;
+	public	Transform	AnimationCameraLookAtAnchor;
+
 	
+	//private attributes
+	private	bool		Animating = false;
+	
+	//private Unity Methods
+	private	void	Start() {
+		MenuElement me = this.GetComponent<MenuElement>();
+		
+		me.OnMenuAction += OnMenuAction;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	private	void	OnMenuAction() {
+		if (this.Animating) return;
+		this.Animating = true;
+		MenuElement me = this.GetComponent<MenuElement>();
+		
+		me.Focus();
+		
+		iTween.MoveTo(Camera.main.gameObject, iTween.Hash(
+			"position", AnimationCameraAnchor,
+			"looktarget", AnimationCameraLookAtAnchor,
+			"time", 0.5f,
+			"looktime", 0.5f,
+			"easetype", iTween.EaseType.easeOutQuad,
+			"oncompletetarget", this.gameObject,
+			"oncomplete", "OnAnimationDone"
+			));
+		iTween.CameraFadeAdd();
+		iTween.CameraFadeDepth(12);
+		iTween.CameraFadeTo(iTween.Hash(
+			"amount", 1.0f,
+			"delay", 0.5f,
+			"time", 0.5f,
+			"easetype", iTween.EaseType.easeInOutExpo,
+			"oncompletetarget", this.gameObject,
+			"oncomplete", "OnFadeOutDone"
+			));
 	}
+
+	private	void	OnFadeOutDone() {
+		//		iTween.CameraFadeDestroy();
+	}
+	
+	private	void	OnAnimationDone() {
+		this.Animating = false;
+		Application.Quit();
+	}
+
 }
