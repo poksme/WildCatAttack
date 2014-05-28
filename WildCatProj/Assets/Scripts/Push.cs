@@ -20,11 +20,11 @@ public class Push : MonoBehaviour {
 		    (me.CompareTag("Player2") && other.CompareTag("Player1"))) {
 			if (collision.collider.rigidbody && me.GetComponent<Dash>().IsDashing && !other.GetComponent<Dash>().IsDashing) {
 				// The feet don't have rigidbody this can be a problem 
-				SoundChannelManager.GetInstance().PlayClipAtPoint(me.GetComponent<WildCatController>().hitSFX, me.transform);
-				SoundChannelManager.GetInstance().PlayClipAtPoint(me.GetComponent<WildCatController>().flySFX, me.transform);
+				SoundChannelManager.GetInstance().PlayClipAtPoint(me.GetComponent<WildCatController>().hitSFX, collision.transform);
+				SoundChannelManager.GetInstance().PlayClipAtPoint(me.GetComponent<WildCatController>().flySFX, collision.transform);
 				collision.collider.rigidbody.AddForce(collision.rigidbody.velocity * 5f, ForceMode.Impulse);
 			} else {
-				SoundChannelManager.GetInstance().PlayClipAtPoint(me.GetComponent<WildCatController>().lowHitSFX, me.transform);
+				SoundChannelManager.GetInstance().PlayClipAtPoint(me.GetComponent<WildCatController>().lowHitSFX, collision.transform);
 			}
 		}
 	}

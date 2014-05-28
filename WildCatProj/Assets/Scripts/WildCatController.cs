@@ -13,6 +13,10 @@ public class WildCatController : MonoBehaviour {
 	public AudioClip hitSFX;
 	public AudioClip flySFX;
 	public AudioClip lowHitSFX;
+	public AudioClip hingeUnfold;
+	public AudioClip hingeFold;
+	private bool hingeBackUnfold = false;
+	private bool hingeFrontUnfold = true;
 
 	// Use this for initialization
 	void Start () {
@@ -34,11 +38,19 @@ public class WildCatController : MonoBehaviour {
 	private void UpdateHingeJoints() {
 		// Front Part
 		if (inputMngr.RightButtonUnrealised) {
+			if (!hingeFrontUnfold) {
+				hingeFrontUnfold = true;
+				SoundChannelManager.GetInstance().PlayClipAtPoint(hingeUnfold, leftFrontHinge.transform);
+			}
 			JointSpring	JPTemp = leftFrontHinge.spring;
 			JPTemp.targetPosition = -10;
 			leftFrontHinge.spring = JPTemp;
 			rightFrontHinge.spring = JPTemp;
 		} else {
+			if (hingeFrontUnfold) {
+				hingeFrontUnfold = false;
+				SoundChannelManager.GetInstance().PlayClipAtPoint(hingeFold, leftFrontHinge.transform);
+			}
 			JointSpring	JPTemp = leftFrontHinge.spring;
 			JPTemp.targetPosition = -120;
 			leftFrontHinge.spring = JPTemp;
@@ -47,11 +59,19 @@ public class WildCatController : MonoBehaviour {
 
 		// Back Part
 		if (inputMngr.LeftButtonUnrealised) {
+			if (!hingeBackUnfold) {
+				hingeBackUnfold = true;
+				SoundChannelManager.GetInstance().PlayClipAtPoint(hingeUnfold, leftBackHinge.transform);
+			}
 			JointSpring	JPTemp = leftBackHinge.spring;
 			JPTemp.targetPosition = -10;
 			leftBackHinge.spring = JPTemp;
 			rightBackHinge.spring = JPTemp;
 		} else {
+			if (hingeBackUnfold) {
+				hingeBackUnfold = false;
+				SoundChannelManager.GetInstance().PlayClipAtPoint(hingeFold, leftBackHinge.transform);
+			}
 			JointSpring	JPTemp = leftBackHinge.spring;
 			JPTemp.targetPosition = -120;
 			leftBackHinge.spring = JPTemp;

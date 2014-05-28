@@ -405,6 +405,14 @@ Prefab:
       propertyPath: flySFX
       value: 
       objectReference: {fileID: 8300000, guid: 41904f85d2ff92a4a970887ce0ba7f7d, type: 3}
+    - target: {fileID: 11400006, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: hingeUnfold
+      value: 
+      objectReference: {fileID: 8300000, guid: 0177230d91f424712a039a2c40e08105, type: 3}
+    - target: {fileID: 11400006, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
+      propertyPath: hingeFold
+      value: 
+      objectReference: {fileID: 8300000, guid: 0177230d91f424712a039a2c40e08105, type: 3}
     m_RemovedComponents:
     - {fileID: 11400008, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0d929155c80cb94448ddfaaf5fe27ed7, type: 2}
@@ -715,6 +723,8 @@ MonoBehaviour:
   hitSFX: {fileID: 8300000, guid: f17801d1aabe8d04f8646d8320e598be, type: 3}
   flySFX: {fileID: 8300000, guid: 41904f85d2ff92a4a970887ce0ba7f7d, type: 3}
   lowHitSFX: {fileID: 8300000, guid: 3afbf66d1f84e4d4990a39975a3e2081, type: 3}
+  hingeUnfold: {fileID: 8300000, guid: 0177230d91f424712a039a2c40e08105, type: 3}
+  hingeFold: {fileID: 8300000, guid: 0177230d91f424712a039a2c40e08105, type: 3}
 --- !u!114 &386793583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1097,6 +1107,14 @@ Prefab:
       propertyPath: lowHitSFX
       value: 
       objectReference: {fileID: 8300000, guid: 3afbf66d1f84e4d4990a39975a3e2081, type: 3}
+    - target: {fileID: 11400000, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: hingeUnfold
+      value: 
+      objectReference: {fileID: 8300000, guid: 0177230d91f424712a039a2c40e08105, type: 3}
+    - target: {fileID: 11400000, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
+      propertyPath: hingeFold
+      value: 
+      objectReference: {fileID: 8300000, guid: 0177230d91f424712a039a2c40e08105, type: 3}
     m_RemovedComponents:
     - {fileID: 11400008, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e8a8eaeb3494ac2409617683e913829d, type: 2}
@@ -1409,7 +1427,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756448030}
   m_LocalRotation: {x: -2.35878488e-07, y: -1.75187118e-08, z: 2.18334795e-09, w: -1}
-  m_LocalPosition: {x: -6.16655874, y: 3.56826782, z: -31.0947094}
+  m_LocalPosition: {x: -3.10958147, y: 1.27552795, z: -21.5615978}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1431,8 +1449,13 @@ MonoBehaviour:
   MaxUnzoom: 100
   MinZoom: 30
   UnzoomStep: .5
-  PanningSmoothingStep: 1
+  CenteringSmoothingStep: 1
   ZoomingSmoothingStep: 5
+  minPan: 0
+  maxPan: 100
+  panStep: .5
+  PanningSmoothingStep: 1
+  ZoomType: 1
 --- !u!1 &784855314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,6 +1941,8 @@ MonoBehaviour:
   hitSFX: {fileID: 8300000, guid: f17801d1aabe8d04f8646d8320e598be, type: 3}
   flySFX: {fileID: 8300000, guid: 41904f85d2ff92a4a970887ce0ba7f7d, type: 3}
   lowHitSFX: {fileID: 8300000, guid: 3afbf66d1f84e4d4990a39975a3e2081, type: 3}
+  hingeUnfold: {fileID: 8300000, guid: 0177230d91f424712a039a2c40e08105, type: 3}
+  hingeFold: {fileID: 8300000, guid: 0177230d91f424712a039a2c40e08105, type: 3}
 --- !u!114 &1123949425
 MonoBehaviour:
   m_ObjectHideFlags: 0
