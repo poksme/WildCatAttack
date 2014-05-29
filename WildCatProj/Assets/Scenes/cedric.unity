@@ -1172,6 +1172,45 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 669509568}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &688572465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 688572466}
+  - 65: {fileID: 688572467}
+  m_Layer: 0
+  m_Name: CameraBoundRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &688572466
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 688572465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.06571269, y: -.701562345, z: .221830025}
+  m_LocalScale: {x: .250674993, y: .511581481, z: .542477429}
+  m_Children: []
+  m_Father: {fileID: 1823026531}
+--- !u!65 &688572467
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 688572465}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &694737118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,7 +1254,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0864473358, y: -.560851216, z: 0}
+  m_ConnectedAnchor: {x: -.0864473283, y: -.560851216, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -1305,6 +1344,7 @@ GameObject:
   - 92: {fileID: 756448033}
   - 124: {fileID: 756448032}
   - 81: {fileID: 756448031}
+  - 114: {fileID: 756448036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1373,6 +1413,26 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &756448036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756448030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34556315e65c54bbb8f4c8c7865d831d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoundsPlayer1Left: {fileID: 1452579267}
+  BoundsPlayer1Right: {fileID: 688572466}
+  BoundsPlayer2Left: {fileID: 2113804732}
+  BoundsPlayer2Right: {fileID: 1960797645}
+  MaxUnzoom: 100
+  MinZoom: 30
+  UnzoomStep: .5
+  PanningSmoothingStep: 1
+  ZoomingSmoothingStep: 5
 --- !u!1 &784855314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,7 +1668,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.086445339, y: -.560851276, z: 0}
+  m_ConnectedAnchor: {x: -.0864453465, y: -.560851336, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -2236,7 +2296,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169419155, y: -.578794301, z: -3.49075918e-07}
+  m_ConnectedAnchor: {x: -.169419169, y: -.578794301, z: -3.49064607e-07}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -2570,7 +2630,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169421852, y: -.578796268, z: 1.24365499e-06}
+  m_ConnectedAnchor: {x: -.169421867, y: -.578796268, z: 1.24389055e-06}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -2648,6 +2708,45 @@ MeshFilter:
   m_PrefabInternal: {fileID: 609339031}
   m_GameObject: {fileID: 1416267631}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1452579266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1452579267}
+  - 65: {fileID: 1452579268}
+  m_Layer: 0
+  m_Name: CameraBoundLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1452579267
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452579266}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.14174247, y: -.681548536, z: .221829832}
+  m_LocalScale: {x: .250674993, y: .511581481, z: .542477429}
+  m_Children: []
+  m_Father: {fileID: 1823026531}
+--- !u!65 &1452579268
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452579266}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1591982431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,7 +2859,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169421852, y: -.578796268, z: 1.24365499e-06}
+  m_ConnectedAnchor: {x: -.169421867, y: -.578796268, z: 1.24389055e-06}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -2955,7 +3054,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .0172157288, y: -.0777308941, z: .35112381}
   m_LocalScale: {x: 3.9892292, y: 1.95472276, z: 1.84339476}
-  m_Children: []
+  m_Children:
+  - {fileID: 688572466}
+  - {fileID: 1452579267}
   m_Father: {fileID: 386793581}
 --- !u!1 &1830786093
 GameObject:
@@ -3001,7 +3102,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .0172157288, y: -.0777308941, z: .35112381}
   m_LocalScale: {x: 3.9892292, y: 1.95472276, z: 1.84339476}
-  m_Children: []
+  m_Children:
+  - {fileID: 2113804732}
+  - {fileID: 1960797645}
   m_Father: {fileID: 1123949423}
 --- !u!65 &1830786096
 BoxCollider:
@@ -3046,6 +3149,45 @@ MeshFilter:
   m_PrefabInternal: {fileID: 142850222}
   m_GameObject: {fileID: 1830786093}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1960797644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1960797645}
+  - 65: {fileID: 1960797646}
+  m_Layer: 0
+  m_Name: CameraBoundRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1960797645
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960797644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.05396831, y: -.701562464, z: .221829832}
+  m_LocalScale: {x: .250674993, y: .511581481, z: .542477429}
+  m_Children: []
+  m_Father: {fileID: 1830786095}
+--- !u!65 &1960797646
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960797644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2023793970
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,7 +3231,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .500000119, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169420168, y: -.57879436, z: -3.55159699e-07}
+  m_ConnectedAnchor: {x: -.169420183, y: -.57879436, z: -3.55088616e-07}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -3282,7 +3424,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0864468291, y: -.560851276, z: 0}
+  m_ConnectedAnchor: {x: -.0864468366, y: -.560851276, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -3360,6 +3502,45 @@ MeshFilter:
   m_PrefabInternal: {fileID: 142850222}
   m_GameObject: {fileID: 2099919581}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2113804731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2113804732}
+  - 65: {fileID: 2113804733}
+  m_Layer: 0
+  m_Name: CameraBoundLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2113804732
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2113804731}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.15348566, y: -.681549907, z: .221829832}
+  m_LocalScale: {x: .250674993, y: .511581481, z: .542477429}
+  m_Children: []
+  m_Father: {fileID: 1830786095}
+--- !u!65 &2113804733
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2113804731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2115935676
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,7 +3704,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: .5, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0864468291, y: -.560851276, z: 0}
+  m_ConnectedAnchor: {x: -.0864468366, y: -.560851276, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 185
