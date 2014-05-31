@@ -25,14 +25,14 @@ public class Menu : MonoBehaviour {
 		bool dirty = false;
 
 		if (!this.MenuElements[this.CurrentElement].HasFocus) {
-			if (Input.GetKeyDown("d")) {
+			if (Input.GetKeyDown("d") || Input.GetKeyDown("l")) {
 				if (this.CurrentElement == (this.TotalElements - 1))
 					this.CurrentElement = 0;
 				else
 					this.CurrentElement += 1;
 				dirty = true;
 			}
-			else if (Input.GetKeyDown("a")) {
+			else if (Input.GetKeyDown("a") || Input.GetKeyDown("j")) {
 				if (this.CurrentElement == 0)
 					this.CurrentElement = (this.TotalElements - 1);
 				else
@@ -42,11 +42,6 @@ public class Menu : MonoBehaviour {
 			else if (Input.GetKeyDown(KeyCode.Return)) {
 				if (!this.Animating) {
 					this.MenuElements[this.CurrentElement].MenuAction();
-				}
-			}
-			else if (Input.GetKeyDown(KeyCode.Escape)) {
-				if (!this.Animating) {
-					this.MenuElements[this.CurrentElement].Return();
 				}
 			}
 		}

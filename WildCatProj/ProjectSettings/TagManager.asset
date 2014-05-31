@@ -7,6 +7,8 @@ TagManager:
   - Body
   - Player1
   - Player2
+  - OptionsMenu
+  - 
   - 
   - 
   Builtin Layer 0: Default
@@ -17,7 +19,7 @@ TagManager:
   Builtin Layer 5: 
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: 
+  User Layer 8: OptionsMenu
   User Layer 9: 
   User Layer 10: 
   User Layer 11: 

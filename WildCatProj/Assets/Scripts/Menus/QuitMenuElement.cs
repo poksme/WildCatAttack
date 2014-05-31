@@ -38,7 +38,6 @@ public class QuitMenuElement : MonoBehaviour {
 		iTween.CameraFadeDepth(12);
 		iTween.CameraFadeTo(iTween.Hash(
 			"amount", 1.0f,
-			"delay", 0.5f,
 			"time", 0.5f,
 			"easetype", iTween.EaseType.easeInOutExpo,
 			"oncompletetarget", this.gameObject,
@@ -47,7 +46,6 @@ public class QuitMenuElement : MonoBehaviour {
 	}
 
 	private	void	OnFadeOutDone() {
-		//		iTween.CameraFadeDestroy();
 	}
 	
 	private	void	OnAnimationDone() {
