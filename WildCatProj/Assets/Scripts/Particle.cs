@@ -4,7 +4,6 @@ using System.Collections;
 public class Particle : MonoBehaviour {
 
 	ParticleSystem		ParticleComp;
-	float				lockPos = 0;
 
 	// Use this for initialization
 	void Start () {
