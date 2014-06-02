@@ -2,6 +2,7 @@
 using System.Collections;
 
 [RequireComponent (typeof (InputManager))]
+[RequireComponent (typeof (WildCatController))]
 public class Dash : MonoBehaviour {
 	
 	// Timer variables
@@ -14,6 +15,9 @@ public class Dash : MonoBehaviour {
 	private InputManager inputMngr;
 	private Rigidbody[]	rigidBodies;
 	private InputManager.Direction dashingDirection = InputManager.Direction.None;
+
+	// Wildcat
+	WildCatController wildCat;
 
 	public bool IsDashing {
 		get {
@@ -30,6 +34,7 @@ public class Dash : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rigidBodies = gameObject.GetComponentsInChildren<Rigidbody>();
+		wildCat = GetComponent<WildCatController>();
 		inputMngr = GetComponent<InputManager>();
 	}
 
@@ -52,7 +57,7 @@ public class Dash : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		UpdateDashTimer();
-		if (!dashTimerIsActive && inputMngr.DoubleTapDirection != InputManager.Direction.None) {
+		if (!dashTimerIsActive && inputMngr.DoubleTapDirection != InputManager.Direction.None && !wildCat.isOverHeat) {
 			StartDashTimer();
 			StartDash(inputMngr.DoubleTapVector);
 			dashingDirection = inputMngr.DoubleTapDirection;
@@ -63,6 +68,7 @@ public class Dash : MonoBehaviour {
 	void StartDash(Vector3 direction) {
 		foreach (Rigidbody rb in rigidBodies)
 			rb.AddForce(direction * dashStrength, ForceMode.Impulse);
+		wildCat.AddHeat();
 	}
 
 	// Set the velocity to 0 to all the children rigidbodies
