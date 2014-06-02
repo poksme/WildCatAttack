@@ -14,9 +14,9 @@ public class Particle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, lockPos, lockPos);
+		//transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, lockPos, lockPos);
 		if( Input.GetKeyDown( KeyCode.A ) ||  Input.GetKeyDown( KeyCode.D )) {
-			particleSystem.Emit(10);
+			particleSystem.Emit(5);
 		}
 	}
 }
