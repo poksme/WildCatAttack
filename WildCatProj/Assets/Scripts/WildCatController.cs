@@ -17,6 +17,14 @@ public class WildCatController : MonoBehaviour {
 	public AudioClip hingeFold;
 	private bool hingeBackUnfold = false;
 	private bool hingeFrontUnfold = true;
+	private float curHeat = 0f;
+	[SerializeField]private float maxHeat = 100f;
+	[SerializeField]private float CoolingDown = 10f;
+	[SerializeField]private float DashCost = 33f;
+
+	public bool isOverHeat {
+		get { return curHeat >= maxHeat; }
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +37,8 @@ public class WildCatController : MonoBehaviour {
 			rb.gameObject.AddComponent<RelayCollision>();
 		}
 	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
 		UpdateHingeJoints();
@@ -37,6 +46,7 @@ public class WildCatController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			Application.LoadLevel (Application.loadedLevel);
 		}
+		DecreaseHeat();
 		// FOR DEBUG PURPOSE
 	}
 
@@ -82,5 +92,18 @@ public class WildCatController : MonoBehaviour {
 			leftBackHinge.spring = JPTemp;
 			rightBackHinge.spring = JPTemp;
 		}
+	}
+
+	public void AddHeat ()
+	{
+		if (!isOverHeat)
+			curHeat += DashCost;
+	}
+
+	void DecreaseHeat ()
+	{
+		curHeat -= Time.deltaTime * CoolingDown;
+		if (curHeat < 0f)
+			curHeat = 0f;
 	}
 }
