@@ -4,6 +4,7 @@ using System.Collections;
 public class Particle : MonoBehaviour {
 
 	ParticleSystem		ParticleComp;
+	float				lockPos = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,7 @@ public class Particle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, lockPos, lockPos);
 		if( Input.GetKeyDown( KeyCode.A ) ||  Input.GetKeyDown( KeyCode.D )) {
 			particleSystem.Emit(10);
 		}
