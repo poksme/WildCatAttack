@@ -7,22 +7,25 @@ public class Menu : MonoBehaviour {
 	public float			CameraSpeed = 3f;
 	public float			CameraLookAtSpeed = 5f;
 	public float			CameraDepth = 0.1f;
+	public GameObject		Ceiling;
 //	public Transform		CameraLookAtTransform;
 
 	private int				TotalElements;
 	private int				CurrentElement;
 	private Vector3			CurrentCameraLookAt;
 	private	bool			Animating;
+	private	bool			dirty;
 
 	private void Start () {
 		this.TotalElements = this.MenuElements.Length;
 		this.CurrentElement = 0;
 		this.Animating = false;
+		dirty = true;
+		this.Ceiling.SetActive(true);
 	}
 	
 	private void Update () {
 		int oldCurrentElement = this.CurrentElement;
-		bool dirty = false;
 
 		if (!this.MenuElements[this.CurrentElement].HasFocus) {
 			if (Input.GetKeyDown("d") || Input.GetKeyDown("l")) {
@@ -61,7 +64,8 @@ public class Menu : MonoBehaviour {
 			));
 		}
 
-		
+		this.dirty = false;
+
 		//Camera movement
 //		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, this.MenuElements[this.CurrentElement].CameraPosition.position, CameraSpeed * Time.deltaTime);
 //		this.CurrentCameraLookAt = Vector3.Lerp(this.CurrentCameraLookAt, this.MenuElements[this.CurrentElement].CameraLookAt.position, CameraLookAtSpeed * Time.deltaTime);

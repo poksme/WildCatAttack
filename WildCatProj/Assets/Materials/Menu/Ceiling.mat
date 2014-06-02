@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Floor
+  m_Name: Ceiling
   m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -17,7 +17,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: b91b9b6e7d452a645b8a38a333845694, type: 3}
+          m_Texture: {fileID: 2800000, guid: 0bfe18933dbefa749a6ac70756a388f3, type: 3}
           m_Scale: {x: 10, y: 10}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}
@@ -25,4 +25,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .791360319, g: .840390444, b: .875, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
