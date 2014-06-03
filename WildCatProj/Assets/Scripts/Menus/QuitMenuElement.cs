@@ -6,6 +6,7 @@ public class QuitMenuElement : MonoBehaviour {
 	//public attributes
 	public	Transform	AnimationCameraAnchor;
 	public	Transform	AnimationCameraLookAtAnchor;
+	public	FutureDoor	Door;
 
 	
 	//private attributes
@@ -24,12 +25,14 @@ public class QuitMenuElement : MonoBehaviour {
 		MenuElement me = this.GetComponent<MenuElement>();
 		
 		me.Focus();
-		
+
+		this.Door.Open();
 		iTween.MoveTo(Camera.main.gameObject, iTween.Hash(
 			"position", AnimationCameraAnchor,
 			"looktarget", AnimationCameraLookAtAnchor,
 			"time", 0.5f,
 			"looktime", 0.5f,
+			"delay", 0.5f,
 			"easetype", iTween.EaseType.easeOutQuad,
 			"oncompletetarget", this.gameObject,
 			"oncomplete", "OnAnimationDone"
@@ -39,6 +42,7 @@ public class QuitMenuElement : MonoBehaviour {
 		iTween.CameraFadeTo(iTween.Hash(
 			"amount", 1.0f,
 			"time", 0.5f,
+			"delay", 0.5f,
 			"easetype", iTween.EaseType.easeInOutExpo,
 			"oncompletetarget", this.gameObject,
 			"oncomplete", "OnFadeOutDone"

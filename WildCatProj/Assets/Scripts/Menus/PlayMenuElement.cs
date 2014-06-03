@@ -8,6 +8,7 @@ public class PlayMenuElement : MonoBehaviour {
 	public	Transform	FirstStepCameraLookAtAnchor;
 	public	Transform	SecondStepCameraAnchor;
 	public	Transform	SecondStepCameraLookAtAnchor;
+	public	FutureDoor	Door;
 
 	
 	//private attributes
@@ -39,6 +40,7 @@ public class PlayMenuElement : MonoBehaviour {
 	}
 	
 	private	void	OnFirstStepAnimationDone() {
+		this.Door.Open();
 		iTween.MoveTo(Camera.main.gameObject, iTween.Hash(
 			"position", SecondStepCameraAnchor,
 			"looktarget", SecondStepCameraLookAtAnchor,
