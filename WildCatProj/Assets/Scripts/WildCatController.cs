@@ -22,6 +22,16 @@ public class WildCatController : MonoBehaviour {
 	[SerializeField]private float CoolingDown = 10f;
 	[SerializeField]private float DashCost = 33f;
 
+	// Heat bar specific
+	[SerializeField]private GameObject heatBar;
+	private ParticleEmitter heatBarParticleSystem;
+	private GameObject heatBarTube;
+	private Color defaultHeatBarTubeColor;
+	private bool isOpaq = false;
+	[SerializeField]private float maxTubeTransparency = 0.8f;
+	private float maxHeatParticleX = 0.424342f;
+	private float minHeatParticleX = -1.5f;
+
 	public bool isOverHeat {
 		get { return curHeat >= maxHeat; }
 	}
@@ -36,6 +46,13 @@ public class WildCatController : MonoBehaviour {
 		foreach (Rigidbody rb in rigidBodies) {
 			rb.gameObject.AddComponent<RelayCollision>();
 		}
+		if (heatBar != null) {
+			heatBarParticleSystem = heatBar.GetComponentInChildren<ParticleEmitter>();
+			heatBarTube = heatBar.transform.FindChild("HeatBarModel").FindChild("TransparentTube").gameObject;
+			defaultHeatBarTubeColor = heatBarTube.renderer.material.color;
+		} else {
+			Debug.Log("heatbar is unset");
+		}
 	}
 
 
@@ -46,8 +63,9 @@ public class WildCatController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			Application.LoadLevel (Application.loadedLevel);
 		}
-		DecreaseHeat();
 		// FOR DEBUG PURPOSE
+		DecreaseHeat();
+		UpdateHeatBarStyle();
 	}
 
 	private void UpdateHingeJoints() {
@@ -105,5 +123,50 @@ public class WildCatController : MonoBehaviour {
 		curHeat -= Time.deltaTime * CoolingDown;
 		if (curHeat < 0f)
 			curHeat = 0f;
+	}
+
+	void UpdateHeatBarColor () {
+		if (isOverHeat) {
+			float alpha;
+			if (!isOpaq) {
+				// try to turn opaq
+				alpha = Mathf.Lerp(heatBarTube.renderer.material.color.a, maxTubeTransparency, 0.1f);
+				if (alpha >= maxTubeTransparency - 0.01f) {
+					isOpaq = true;
+				}
+			} else {
+				alpha = Mathf.Lerp(heatBarTube.renderer.material.color.a, defaultHeatBarTubeColor.a, 0.1f);
+				if (alpha <= defaultHeatBarTubeColor.a + 0.01f) {
+					isOpaq = false;
+				}
+			}
+			heatBarTube.renderer.material.color = new Color(
+				Mathf.Lerp(heatBarTube.renderer.material.color.r, 0.6f, 0.1f),
+				Mathf.Lerp(heatBarTube.renderer.material.color.g, 0, 0.1f),
+				Mathf.Lerp(heatBarTube.renderer.material.color.b, 0, 0.1f),
+				alpha
+				);
+		} else {
+			heatBarTube.renderer.material.color = new Color(
+				Mathf.Lerp(heatBarTube.renderer.material.color.r, defaultHeatBarTubeColor.r, 0.1f),
+				Mathf.Lerp(heatBarTube.renderer.material.color.g, defaultHeatBarTubeColor.g, 0.1f),
+				Mathf.Lerp(heatBarTube.renderer.material.color.b, defaultHeatBarTubeColor.b, 0.1f),
+				Mathf.Lerp(heatBarTube.renderer.material.color.a, defaultHeatBarTubeColor.a, 0.1f)
+				);
+		}
+	}
+
+	void UpdateHeatBarParticleSystem () {
+		float heatPercentage = (curHeat > maxHeat ? 1f : curHeat / maxHeat);
+		heatBarParticleSystem.maxEmission = 100 * heatPercentage;
+		heatBarParticleSystem.transform.localScale = new Vector3(3.5f * heatPercentage, heatBarParticleSystem.transform.localScale.y, heatBarParticleSystem.transform.localScale.z);
+		heatBarParticleSystem.transform.localPosition = new Vector3( minHeatParticleX + (maxHeatParticleX - minHeatParticleX) * heatPercentage, heatBarParticleSystem.transform.localPosition.y, heatBarParticleSystem.transform.localPosition.z);
+	}
+
+	void UpdateHeatBarStyle () {
+		if (heatBar != null) {
+			UpdateHeatBarColor();
+			UpdateHeatBarParticleSystem();
+		}
 	}
 }
