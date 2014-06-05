@@ -9,6 +9,7 @@ public class PlayMenuElement : MonoBehaviour {
 	public	Transform	SecondStepCameraAnchor;
 	public	Transform	SecondStepCameraLookAtAnchor;
 	public	FutureDoor	Door;
+	public	PushButton	PushButton;
 
 	
 	//private attributes
@@ -28,11 +29,13 @@ public class PlayMenuElement : MonoBehaviour {
 
 		me.Focus();
 
+		this.PushButton.Push();
 		iTween.MoveTo(Camera.main.gameObject, iTween.Hash(
 			"position", FirstStepCameraAnchor,
 			"looktarget", FirstStepCameraLookAtAnchor,
-			"time", 0.5f,
-			"looktime", 0.5f,
+			"time", 1.0f,
+			"looktime", 1.0f,
+			"delay", 1.0f,
 			"easetype", iTween.EaseType.easeOutQuad,
 			"oncompletetarget", this.gameObject,
 			"oncomplete", "OnFirstStepAnimationDone"
@@ -45,8 +48,8 @@ public class PlayMenuElement : MonoBehaviour {
 			"position", SecondStepCameraAnchor,
 			"looktarget", SecondStepCameraLookAtAnchor,
 			"delay", 0.5f,
-			"time", 0.6f,
-			"looktime", 0.5f,
+			"time", 1.0f,
+			"looktime", 1.0f,
 			"easetype", iTween.EaseType.easeOutQuad,
 			"oncompletetarget", this.gameObject,
 			"oncomplete", "OnSecondStepAnimationDone"
@@ -56,7 +59,7 @@ public class PlayMenuElement : MonoBehaviour {
 		iTween.CameraFadeTo(iTween.Hash(
 			"amount", 1.0f,
 			"delay", 0.5f,
-			"time", 0.5f,
+			"time", 1.0f,
 			"easetype", iTween.EaseType.easeInOutExpo,
 			"oncompletetarget", this.gameObject,
 			"oncomplete", "OnFadeOutDone"
