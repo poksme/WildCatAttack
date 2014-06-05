@@ -1,0 +1,751 @@
+fileFormatVersion: 2
+guid: b7630dceecc2a6140a07eb94bdae3b45
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: arc screen
+    100002: arm
+    100004: arm pivot
+    100006: Box01
+    100008: Box02
+    100010: Box03
+    100012: Box04
+    100014: Box05
+    100016: Box06
+    100018: Box07
+    100020: Box08
+    100022: Box10
+    100024: Box11
+    100026: Capsule02
+    100028: ChamferCyl01
+    100030: Circle01
+    100032: Circle02
+    100034: Circle03
+    100036: Circle04
+    100038: Circle05
+    100040: Cylinder01
+    100042: Cylinder02
+    100044: Cylinder03
+    100046: Cylinder04
+    100048: Cylinder05
+    100050: Cylinder06
+    100052: Cylinder07
+    100054: Cylinder08
+    100056: Cylinder09
+    100058: Cylinder10
+    100060: Cylinder11
+    100062: Cylinder12
+    100064: Cylinder13
+    100066: Cylinder14
+    100068: Cylinder15
+    100070: Cylinder16
+    100072: Cylinder17
+    100074: Cylinder18
+    100076: Cylinder19
+    100078: Cylinder20
+    100080: Cylinder21
+    100082: Cylinder22
+    100084: Cylinder23
+    100086: Cylinder24
+    100088: Cylinder25
+    100090: Cylinder26
+    100092: Cylinder27
+    100094: Cylinder28
+    100096: Cylinder29
+    100098: Cylinder30
+    100100: Cylinder31
+    100102: Cylinder32
+    100104: Cylinder33
+    100106: Damper01
+    100108: Line01
+    100110: Line02
+    100112: Line03
+    100114: Line04
+    100116: Line05
+    100118: Line06
+    100120: Line07
+    100122: Line08
+    100124: Line09
+    100126: Line10
+    100128: Line11
+    100130: Line12
+    100132: Line14
+    100134: lower arm
+    100136: lower arm pivot
+    100138: NGon01
+    100140: NGon02
+    100142: NGon03
+    100144: NGon04
+    100146: NGon05
+    100148: NGon06
+    100150: NGon07
+    100152: Rectangle01
+    100154: Rectangle02
+    100156: Rectangle03
+    100158: Rectangle04
+    100160: Rectangle05
+    100162: Rectangle06
+    100164: Rectangle07
+    100166: Rectangle08
+    100168: Rectangle09
+    100170: //RootNode
+    100172: Sphere01
+    100174: Sphere02
+    100176: Sphere03
+    100178: Sphere04
+    100180: Star01
+    100182: Star02
+    100184: Star03
+    100186: Star04
+    100188: Star05
+    100190: Star06
+    100192: Tube01
+    100194: Tube02
+    100196: Tube03
+    100198: Tube04
+    100200: Tube05
+    400000: arc screen
+    400002: arm
+    400004: arm pivot
+    400006: Box01
+    400008: Box02
+    400010: Box03
+    400012: Box04
+    400014: Box05
+    400016: Box06
+    400018: Box07
+    400020: Box08
+    400022: Box10
+    400024: Box11
+    400026: Capsule02
+    400028: ChamferCyl01
+    400030: Circle01
+    400032: Circle02
+    400034: Circle03
+    400036: Circle04
+    400038: Circle05
+    400040: Cylinder01
+    400042: Cylinder02
+    400044: Cylinder03
+    400046: Cylinder04
+    400048: Cylinder05
+    400050: Cylinder06
+    400052: Cylinder07
+    400054: Cylinder08
+    400056: Cylinder09
+    400058: Cylinder10
+    400060: Cylinder11
+    400062: Cylinder12
+    400064: Cylinder13
+    400066: Cylinder14
+    400068: Cylinder15
+    400070: Cylinder16
+    400072: Cylinder17
+    400074: Cylinder18
+    400076: Cylinder19
+    400078: Cylinder20
+    400080: Cylinder21
+    400082: Cylinder22
+    400084: Cylinder23
+    400086: Cylinder24
+    400088: Cylinder25
+    400090: Cylinder26
+    400092: Cylinder27
+    400094: Cylinder28
+    400096: Cylinder29
+    400098: Cylinder30
+    400100: Cylinder31
+    400102: Cylinder32
+    400104: Cylinder33
+    400106: Damper01
+    400108: Line01
+    400110: Line02
+    400112: Line03
+    400114: Line04
+    400116: Line05
+    400118: Line06
+    400120: Line07
+    400122: Line08
+    400124: Line09
+    400126: Line10
+    400128: Line11
+    400130: Line12
+    400132: Line14
+    400134: lower arm
+    400136: lower arm pivot
+    400138: NGon01
+    400140: NGon02
+    400142: NGon03
+    400144: NGon04
+    400146: NGon05
+    400148: NGon06
+    400150: NGon07
+    400152: Rectangle01
+    400154: Rectangle02
+    400156: Rectangle03
+    400158: Rectangle04
+    400160: Rectangle05
+    400162: Rectangle06
+    400164: Rectangle07
+    400166: Rectangle08
+    400168: Rectangle09
+    400170: //RootNode
+    400172: Sphere01
+    400174: Sphere02
+    400176: Sphere03
+    400178: Sphere04
+    400180: Star01
+    400182: Star02
+    400184: Star03
+    400186: Star04
+    400188: Star05
+    400190: Star06
+    400192: Tube01
+    400194: Tube02
+    400196: Tube03
+    400198: Tube04
+    400200: Tube05
+    2300000: arm pivot
+    2300002: Box01
+    2300004: Box02
+    2300006: Box03
+    2300008: Box04
+    2300010: Box05
+    2300012: Box06
+    2300014: Box07
+    2300016: Box08
+    2300018: Box10
+    2300020: Box11
+    2300022: Capsule02
+    2300024: ChamferCyl01
+    2300026: Circle01
+    2300028: Circle02
+    2300030: Circle03
+    2300032: Circle04
+    2300034: Circle05
+    2300036: Cylinder01
+    2300038: Cylinder02
+    2300040: Cylinder03
+    2300042: Cylinder04
+    2300044: Cylinder05
+    2300046: Cylinder06
+    2300048: Cylinder07
+    2300050: Cylinder08
+    2300052: Cylinder09
+    2300054: Cylinder10
+    2300056: Cylinder11
+    2300058: Cylinder12
+    2300060: Cylinder13
+    2300062: Cylinder14
+    2300064: Cylinder15
+    2300066: Cylinder16
+    2300068: Cylinder17
+    2300070: Cylinder18
+    2300072: Cylinder19
+    2300074: Cylinder20
+    2300076: Cylinder21
+    2300078: Cylinder22
+    2300080: Cylinder23
+    2300082: Cylinder24
+    2300084: Cylinder25
+    2300086: Cylinder26
+    2300088: Cylinder27
+    2300090: Cylinder28
+    2300092: Cylinder29
+    2300094: Cylinder30
+    2300096: Cylinder31
+    2300098: Cylinder32
+    2300100: Cylinder33
+    2300102: Damper01
+    2300104: Line01
+    2300106: Line03
+    2300108: Line04
+    2300110: lower arm pivot
+    2300112: NGon01
+    2300114: NGon02
+    2300116: NGon03
+    2300118: NGon04
+    2300120: NGon05
+    2300122: NGon06
+    2300124: NGon07
+    2300126: Rectangle01
+    2300128: Rectangle02
+    2300130: Rectangle03
+    2300132: Rectangle04
+    2300134: Rectangle05
+    2300136: Rectangle06
+    2300138: Rectangle07
+    2300140: Rectangle08
+    2300142: Rectangle09
+    2300144: Sphere01
+    2300146: Sphere02
+    2300148: Sphere03
+    2300150: Sphere04
+    2300152: Star01
+    2300154: Star02
+    2300156: Star03
+    2300158: Star04
+    2300160: Star05
+    2300162: Star06
+    2300164: Tube01
+    2300166: Tube02
+    2300168: Tube03
+    2300170: Tube04
+    2300172: Tube05
+    3300000: arm pivot
+    3300002: Box01
+    3300004: Box02
+    3300006: Box03
+    3300008: Box04
+    3300010: Box05
+    3300012: Box06
+    3300014: Box07
+    3300016: Box08
+    3300018: Box10
+    3300020: Box11
+    3300022: Capsule02
+    3300024: ChamferCyl01
+    3300026: Circle01
+    3300028: Circle02
+    3300030: Circle03
+    3300032: Circle04
+    3300034: Circle05
+    3300036: Cylinder01
+    3300038: Cylinder02
+    3300040: Cylinder03
+    3300042: Cylinder04
+    3300044: Cylinder05
+    3300046: Cylinder06
+    3300048: Cylinder07
+    3300050: Cylinder08
+    3300052: Cylinder09
+    3300054: Cylinder10
+    3300056: Cylinder11
+    3300058: Cylinder12
+    3300060: Cylinder13
+    3300062: Cylinder14
+    3300064: Cylinder15
+    3300066: Cylinder16
+    3300068: Cylinder17
+    3300070: Cylinder18
+    3300072: Cylinder19
+    3300074: Cylinder20
+    3300076: Cylinder21
+    3300078: Cylinder22
+    3300080: Cylinder23
+    3300082: Cylinder24
+    3300084: Cylinder25
+    3300086: Cylinder26
+    3300088: Cylinder27
+    3300090: Cylinder28
+    3300092: Cylinder29
+    3300094: Cylinder30
+    3300096: Cylinder31
+    3300098: Cylinder32
+    3300100: Cylinder33
+    3300102: Damper01
+    3300104: Line01
+    3300106: Line03
+    3300108: Line04
+    3300110: lower arm pivot
+    3300112: NGon01
+    3300114: NGon02
+    3300116: NGon03
+    3300118: NGon04
+    3300120: NGon05
+    3300122: NGon06
+    3300124: NGon07
+    3300126: Rectangle01
+    3300128: Rectangle02
+    3300130: Rectangle03
+    3300132: Rectangle04
+    3300134: Rectangle05
+    3300136: Rectangle06
+    3300138: Rectangle07
+    3300140: Rectangle08
+    3300142: Rectangle09
+    3300144: Sphere01
+    3300146: Sphere02
+    3300148: Sphere03
+    3300150: Sphere04
+    3300152: Star01
+    3300154: Star02
+    3300156: Star03
+    3300158: Star04
+    3300160: Star05
+    3300162: Star06
+    3300164: Tube01
+    3300166: Tube02
+    3300168: Tube03
+    3300170: Tube04
+    3300172: Tube05
+    4300000: Cylinder01
+    4300002: Cylinder02
+    4300004: Box01
+    4300006: Box08
+    4300008: Box07
+    4300010: Box10
+    4300012: Box06
+    4300014: Star01
+    4300016: Rectangle08
+    4300018: Rectangle09
+    4300020: Sphere04
+    4300022: Sphere01
+    4300024: Sphere03
+    4300026: Sphere02
+    4300028: Line03
+    4300030: Line04
+    4300032: Cylinder26
+    4300034: Cylinder25
+    4300036: Cylinder27
+    4300038: Cylinder28
+    4300040: Cylinder29
+    4300042: Cylinder30
+    4300044: Cylinder31
+    4300046: Cylinder32
+    4300048: Cylinder33
+    4300050: Box04
+    4300052: Tube03
+    4300054: Cylinder16
+    4300056: Cylinder22
+    4300058: Tube04
+    4300060: Cylinder23
+    4300062: Cylinder24
+    4300064: ChamferCyl01
+    4300066: Capsule02
+    4300068: Cylinder20
+    4300070: Cylinder21
+    4300072: Cylinder19
+    4300074: Cylinder04
+    4300076: Box11
+    4300078: NGon04
+    4300080: NGon02
+    4300082: NGon05
+    4300084: NGon03
+    4300086: NGon01
+    4300088: NGon07
+    4300090: NGon06
+    4300092: Box03
+    4300094: lower arm pivot
+    4300096: Damper01
+    4300098: Line01
+    4300100: Cylinder03
+    4300102: Box02
+    4300104: Rectangle01
+    4300106: Cylinder12
+    4300108: Star02
+    4300110: Rectangle02
+    4300112: arm pivot
+    4300114: Cylinder11
+    4300116: Rectangle04
+    4300118: Cylinder10
+    4300120: Rectangle07
+    4300122: Cylinder07
+    4300124: Cylinder06
+    4300126: Rectangle06
+    4300128: Cylinder09
+    4300130: Cylinder08
+    4300132: Rectangle05
+    4300134: Cylinder18
+    4300136: Rectangle03
+    4300138: Circle01
+    4300140: Tube01
+    4300142: Cylinder05
+    4300144: Cylinder15
+    4300146: Star04
+    4300148: Cylinder13
+    4300150: Cylinder14
+    4300152: Cylinder17
+    4300154: Star05
+    4300156: Box05
+    4300158: Circle04
+    4300160: Circle05
+    4300162: Star06
+    4300164: Star03
+    4300166: Circle03
+    4300168: Circle02
+    4300170: Tube02
+    4300172: Tube05
+    7400000: Robot Arm Animation
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Robot Arm Animation
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box03
+        weight: 1
+      - path: Cylinder01
+        weight: 1
+      - path: Cylinder01/Cylinder02
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/arc screen
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/arc screen/Line03
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/arc screen/Line04
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/arc screen/Rectangle08
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/arc screen/Rectangle09
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/arc screen/Sphere01
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/arc screen/Sphere02
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/arc screen/Sphere03
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/arc screen/Sphere04
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Box06
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Box07
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Box07/Box10
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Box08
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Cylinder25
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Cylinder26
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Cylinder27
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Cylinder28
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Cylinder29
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Cylinder30
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Cylinder31
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Cylinder32
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Cylinder33
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box01/Star01
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box04
+        weight: 1
+      - path: Cylinder01/Cylinder02/Box11
+        weight: 1
+      - path: Cylinder01/Cylinder02/Capsule02
+        weight: 1
+      - path: Cylinder01/Cylinder02/ChamferCyl01
+        weight: 1
+      - path: Cylinder01/Cylinder02/Cylinder04
+        weight: 1
+      - path: Cylinder01/Cylinder02/Cylinder16
+        weight: 1
+      - path: Cylinder01/Cylinder02/Cylinder19
+        weight: 1
+      - path: Cylinder01/Cylinder02/Cylinder20
+        weight: 1
+      - path: Cylinder01/Cylinder02/Cylinder21
+        weight: 1
+      - path: Cylinder01/Cylinder02/Cylinder22
+        weight: 1
+      - path: Cylinder01/Cylinder02/Cylinder23
+        weight: 1
+      - path: Cylinder01/Cylinder02/Cylinder24
+        weight: 1
+      - path: Cylinder01/Cylinder02/Line02
+        weight: 1
+      - path: Cylinder01/Cylinder02/Line05
+        weight: 1
+      - path: Cylinder01/Cylinder02/Line06
+        weight: 1
+      - path: Cylinder01/Cylinder02/Line14
+        weight: 1
+      - path: Cylinder01/Cylinder02/Tube03
+        weight: 1
+      - path: Cylinder01/Cylinder02/Tube04
+        weight: 1
+      - path: Line08
+        weight: 1
+      - path: Line10
+        weight: 1
+      - path: lower arm pivot
+        weight: 1
+      - path: lower arm pivot/lower arm
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Circle01
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Circle02
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Circle03
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Cylinder06
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Cylinder07
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Cylinder08
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Cylinder09
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Cylinder10
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Cylinder11
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Line07
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Line09
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Line11
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Line12
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Rectangle03
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Rectangle04
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Rectangle05
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Rectangle05/Cylinder18
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Rectangle06
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Rectangle07
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Box05
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Circle04
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Circle05
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Cylinder13
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Cylinder14
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Cylinder15
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Cylinder17
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Star03
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Star04
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Star05
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube01/Cylinder05/Star06
+        weight: 1
+      - path: lower arm pivot/lower arm/arm pivot/arm/Tube02
+        weight: 1
+      - path: lower arm pivot/lower arm/Box02
+        weight: 1
+      - path: lower arm pivot/lower arm/Cylinder03
+        weight: 1
+      - path: lower arm pivot/lower arm/Cylinder12
+        weight: 1
+      - path: lower arm pivot/lower arm/Damper01
+        weight: 1
+      - path: lower arm pivot/lower arm/Line01
+        weight: 1
+      - path: lower arm pivot/lower arm/Rectangle01
+        weight: 1
+      - path: lower arm pivot/lower arm/Rectangle02
+        weight: 1
+      - path: lower arm pivot/lower arm/Star02
+        weight: 1
+      - path: NGon01
+        weight: 1
+      - path: NGon02
+        weight: 1
+      - path: NGon03
+        weight: 1
+      - path: NGon04
+        weight: 1
+      - path: NGon05
+        weight: 1
+      - path: NGon06
+        weight: 1
+      - path: NGon07
+        weight: 1
+      - path: Tube05
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
