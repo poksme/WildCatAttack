@@ -1812,7 +1812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &219428313
 Renderer:
   m_ObjectHideFlags: 0
@@ -2365,7 +2365,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 315970626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.964054108, y: 10.0539703, z: 7.19447327}
+  m_LocalPosition: {x: -.964054108, y: 10.9894981, z: 7.19447327}
   m_LocalScale: {x: 156.939407, y: 1, z: 50.5537491}
   m_Children: []
   m_Father: {fileID: 1268260025}
@@ -5280,7 +5280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &633711082
 Transform:
   m_ObjectHideFlags: 0
@@ -5986,8 +5986,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 746434527}
   m_LocalRotation: {x: .545081317, y: -.545081317, z: .450429022, w: .450429171}
-  m_LocalPosition: {x: 23.911726, y: 7.44288921, z: -8.20103741}
-  m_LocalScale: {x: .384810209, y: .384810209, z: .384810209}
+  m_LocalPosition: {x: 23.911726, y: 6.91760445, z: -6.13335228}
+  m_LocalScale: {x: .561957777, y: .561957777, z: .561957777}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &747433733
@@ -7578,6 +7578,10 @@ Prefab:
     - target: {fileID: 2300000, guid: 3615c008c58faf14abc2219b8a1e4838, type: 3}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3615c008c58faf14abc2219b8a1e4838, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3615c008c58faf14abc2219b8a1e4838, type: 3}
@@ -13147,7 +13151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1607068060
 Transform:
   m_ObjectHideFlags: 0
@@ -13399,6 +13403,10 @@ Prefab:
     - target: {fileID: 2300000, guid: 3615c008c58faf14abc2219b8a1e4838, type: 3}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3615c008c58faf14abc2219b8a1e4838, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3615c008c58faf14abc2219b8a1e4838, type: 3}
@@ -17027,7 +17035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2055914931
 Transform:
   m_ObjectHideFlags: 0
