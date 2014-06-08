@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Metal_Floor_Texture_by_loner654
+  m_Name: steel_tread_plate_red
   m_Shader: {fileID: 3, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -17,20 +17,20 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: ccb7ba77c6af81346ac8875f811654f2, type: 3}
-          m_Scale: {x: 5, y: 5}
-          m_Offset: {x: -2, y: -2}
+          m_Texture: {fileID: 2800000, guid: e8228a436f7de624881d36d159013402, type: 3}
+          m_Scale: {x: 2, y: 2}
+          m_Offset: {x: -.5, y: -.5}
     m_Floats:
       data:
         first:
           name: _Shininess
-        second: .078125
+        second: .0442713164
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .588235319, g: .588235319, b: .588235319, a: 1}
+        second: {r: 1, g: .0235294122, b: .0235294122, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: .5, g: .5, b: .5, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}

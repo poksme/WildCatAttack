@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class SpawnPoint : MonoBehaviour {
+public class SpawnPointBehaviour : MonoBehaviour {
 
 	public	List<GameObject> BrokenWildCats;
 
