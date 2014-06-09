@@ -102,8 +102,7 @@ Transform:
   m_LocalRotation: {x: 3.09086232e-08, y: .707106829, z: .707106829, w: -3.09086232e-08}
   m_LocalPosition: {x: -.063060604, y: -.0861918777, z: .00261693844}
   m_LocalScale: {x: 1.22459352, y: 1.02559698, z: .796580315}
-  m_Children:
-  - {fileID: 168894569}
+  m_Children: []
   m_Father: {fileID: 1613707662}
 --- !u!95 &1047759
 Animator:
@@ -1506,7 +1505,7 @@ GameObject:
   - 4: {fileID: 137986665}
   m_Layer: 0
   m_Name: LeftSide
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1654,7 +1653,7 @@ GameObject:
   - 59: {fileID: 167232660}
   m_Layer: 0
   m_Name: BackArm
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1782,11 +1781,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 168894568}
-  m_LocalRotation: {x: 3.23398766e-08, y: .707106829, z: -1.55974064e-07, w: .707106829}
-  m_LocalPosition: {x: -.0282201394, y: .0945131406, z: .359166712}
-  m_LocalScale: {x: .0152745191, y: 1.62927651, z: .0855055749}
+  m_LocalRotation: {x: -.500000119, y: .5, z: .5, w: -.499999911}
+  m_LocalPosition: {x: -.0285024066, y: .199913278, z: .0995493084}
+  m_LocalScale: {x: .012167383, y: 1.67098117, z: .10470961}
   m_Children: []
-  m_Father: {fileID: 1047758}
+  m_Father: {fileID: 1613707662}
 --- !u!199 &168894570
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -3006,7 +3005,7 @@ GameObject:
   - 135: {fileID: 216152142}
   m_Layer: 0
   m_Name: Feet
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3154,7 +3153,7 @@ GameObject:
   - 4: {fileID: 229645687}
   m_Layer: 0
   m_Name: RightSide
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3304,7 +3303,7 @@ GameObject:
   - 135: {fileID: 348831262}
   m_Layer: 0
   m_Name: Feet
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3393,7 +3392,7 @@ GameObject:
   - 59: {fileID: 352488047}
   m_Layer: 0
   m_Name: FrontArm
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3735,15 +3734,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b240b2385257c85488fb308fad59b2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSFX: {fileID: 0}
+  flySFX: {fileID: 0}
+  lowHitSFX: {fileID: 0}
   leftFrontHinge: {fileID: 694737121}
   leftBackHinge: {fileID: 1308802069}
   rightFrontHinge: {fileID: 2119118056}
   rightBackHinge: {fileID: 1416267634}
-  hitSFX: {fileID: 0}
-  flySFX: {fileID: 0}
-  lowHitSFX: {fileID: 0}
   hingeUnfold: {fileID: 0}
   hingeFold: {fileID: 0}
+  maxHeat: 100
+  CoolingDown: 10
+  DashCost: 33
+  heatBar: {fileID: 0}
+  maxTubeTransparency: .800000012
+  lives: 3
 --- !u!114 &386793583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3758,6 +3763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashTimerMax: .150000006
   dashStrength: 30
+  shieldObject: {fileID: 0}
 --- !u!114 &386793584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3796,7 +3802,7 @@ GameObject:
   - 65: {fileID: 408186815}
   m_Layer: 0
   m_Name: CameraBoundLeft
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6346,7 +6352,7 @@ GameObject:
   - 59: {fileID: 608290225}
   m_Layer: 0
   m_Name: FrontForeArm
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6613,7 +6619,7 @@ GameObject:
   - 59: {fileID: 662096012}
   m_Layer: 0
   m_Name: FrontForeArm
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8716,15 +8722,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b240b2385257c85488fb308fad59b2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSFX: {fileID: 0}
+  flySFX: {fileID: 0}
+  lowHitSFX: {fileID: 0}
   leftFrontHinge: {fileID: 952681938}
   leftBackHinge: {fileID: 2023793972}
   rightFrontHinge: {fileID: 2099919583}
   rightBackHinge: {fileID: 1775575964}
-  hitSFX: {fileID: 0}
-  flySFX: {fileID: 0}
-  lowHitSFX: {fileID: 0}
   hingeUnfold: {fileID: 0}
   hingeFold: {fileID: 0}
+  maxHeat: 100
+  CoolingDown: 10
+  DashCost: 33
+  heatBar: {fileID: 0}
+  maxTubeTransparency: .800000012
+  lives: 3
 --- !u!114 &1123949425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8751,6 +8763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashTimerMax: .150000006
   dashStrength: 30
+  shieldObject: {fileID: 0}
 --- !u!114 &1123949427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9529,7 +9542,7 @@ GameObject:
   - 114: {fileID: 1417280656}
   m_Layer: 0
   m_Name: WildCat
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9560,15 +9573,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b240b2385257c85488fb308fad59b2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSFX: {fileID: 8300000, guid: f17801d1aabe8d04f8646d8320e598be, type: 3}
+  flySFX: {fileID: 8300000, guid: 41904f85d2ff92a4a970887ce0ba7f7d, type: 3}
+  lowHitSFX: {fileID: 8300000, guid: ed6e4324a55df7b45b22c6cbeca79985, type: 3}
   leftFrontHinge: {fileID: 608290225}
   leftBackHinge: {fileID: 1573238655}
   rightFrontHinge: {fileID: 662096012}
   rightBackHinge: {fileID: 1539767546}
-  hitSFX: {fileID: 8300000, guid: f17801d1aabe8d04f8646d8320e598be, type: 3}
-  flySFX: {fileID: 8300000, guid: 41904f85d2ff92a4a970887ce0ba7f7d, type: 3}
-  lowHitSFX: {fileID: 8300000, guid: ed6e4324a55df7b45b22c6cbeca79985, type: 3}
   hingeUnfold: {fileID: 8300000, guid: 0177230d91f424712a039a2c40e08105, type: 3}
   hingeFold: {fileID: 8300000, guid: 0177230d91f424712a039a2c40e08105, type: 3}
+  maxHeat: 100
+  CoolingDown: 10
+  DashCost: 33
+  heatBar: {fileID: 0}
+  maxTubeTransparency: .5
+  lives: 3
 --- !u!114 &1417280657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9595,6 +9614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashTimerMax: .150000006
   dashStrength: 30
+  shieldObject: {fileID: 1047757}
 --- !u!114 &1417280659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9625,7 +9645,7 @@ GameObject:
   - 59: {fileID: 1422913047}
   m_Layer: 0
   m_Name: BackArm
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9785,7 +9805,7 @@ GameObject:
   - 65: {fileID: 1477434247}
   m_Layer: 0
   m_Name: CameraBoundRight
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9829,7 +9849,7 @@ GameObject:
   - 59: {fileID: 1507814149}
   m_Layer: 0
   m_Name: FrontArm
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9949,7 +9969,7 @@ GameObject:
   - 59: {fileID: 1539767546}
   m_Layer: 0
   m_Name: BackForeArm
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10070,7 +10090,7 @@ GameObject:
   - 59: {fileID: 1573238655}
   m_Layer: 0
   m_Name: BackForeArm
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10259,7 +10279,7 @@ GameObject:
   - 65: {fileID: 1613707664}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10278,6 +10298,7 @@ Transform:
   - {fileID: 408186814}
   - {fileID: 1477434246}
   - {fileID: 1047758}
+  - {fileID: 168894569}
   m_Father: {fileID: 1417280655}
 --- !u!54 &1613707663
 Rigidbody:
@@ -10408,6 +10429,18 @@ Prefab:
       propertyPath: m_ConnectedAnchor.y
       value: .0127980663
       objectReference: {fileID: 0}
+    - target: {fileID: 5900012, guid: 2a0bc5456801ebf489784ede9ce95f7a, type: 2}
+      propertyPath: m_ConnectedAnchor.y
+      value: -.0717205331
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900012, guid: 2a0bc5456801ebf489784ede9ce95f7a, type: 2}
+      propertyPath: m_ConnectedAnchor.z
+      value: -.239916608
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 2a0bc5456801ebf489784ede9ce95f7a, type: 2}
+      propertyPath: shieldObject
+      value: 
+      objectReference: {fileID: 1047757}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a0bc5456801ebf489784ede9ce95f7a, type: 2}
   m_RootGameObject: {fileID: 1417280654}
@@ -10427,7 +10460,7 @@ GameObject:
   - 135: {fileID: 1662876126}
   m_Layer: 0
   m_Name: Feet
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11524,7 +11557,7 @@ GameObject:
   - 135: {fileID: 2101237532}
   m_Layer: 0
   m_Name: Feet
-  m_TagString: Player1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

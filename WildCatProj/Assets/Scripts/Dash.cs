@@ -19,6 +19,12 @@ public class Dash : MonoBehaviour {
 	// Wildcat
 	WildCatController wildCat;
 
+	//Shield effect
+	public GameObject shieldObject;
+	private Color colorStart;
+	private Color colorEnd;
+	private float fadeDuration = 100.0f;
+
 	public bool IsDashing {
 		get {
 			return dashTimerIsActive;
@@ -36,6 +42,11 @@ public class Dash : MonoBehaviour {
 		rigidBodies = gameObject.GetComponentsInChildren<Rigidbody>();
 		wildCat = GetComponent<WildCatController>();
 		inputMngr = GetComponent<InputManager>();
+		if (shieldObject == null)
+			Debug.Log ("Shield Object is not set");
+		colorStart = shieldObject.renderer.material.color;
+		colorEnd = new Color(colorStart.r, colorStart.g, colorStart.b, 0.0f);
+		FadeOut();
 	}
 
 	private void StartDashTimer() {
@@ -69,6 +80,9 @@ public class Dash : MonoBehaviour {
 		foreach (Rigidbody rb in rigidBodies)
 			rb.AddForce(direction * dashStrength, ForceMode.Impulse);
 		wildCat.AddHeat();
+		//shieldObject.SetActive(true);
+		//FadeShield(100f,2.0f);
+		FadeIn();
 	}
 
 	// Set the velocity to 0 to all the children rigidbodies
@@ -77,5 +91,23 @@ public class Dash : MonoBehaviour {
 			if (!rb.isKinematic)
 				rb.velocity = Vector3.zero;
 		}
+		//shieldObject.SetActive(false);
+		//FadeShield(100f,0.3f);
+		FadeOut();
 	}
+
+	void FadeOut ()
+	{
+		for (float t = 0.0f; t < fadeDuration; t += Time.deltaTime) {
+			shieldObject.renderer.material.color = Color.Lerp (colorStart, colorEnd, t/fadeDuration);
+		}
+	}
+
+	void FadeIn ()
+	{
+		for (float t = 0.0f; t < fadeDuration; t += Time.deltaTime) {
+			shieldObject.renderer.material.color = Color.Lerp (colorEnd, colorStart, t/fadeDuration);
+		}
+	}
+
 }
