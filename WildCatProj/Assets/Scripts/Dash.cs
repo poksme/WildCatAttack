@@ -24,7 +24,7 @@ public class Dash : MonoBehaviour {
 	public GameObject LeftShieldObject;
 	private Color colorStart;
 	private Color colorEnd;
-	private float fadeDuration = 0.5f;
+	private float fadeDuration = 0.2f;
 	private float rightCurrentFadeTime = 0.5f;
 	private float leftCurrentFadeTime = 0.5f;
 
@@ -45,7 +45,7 @@ public class Dash : MonoBehaviour {
 		rigidBodies = gameObject.GetComponentsInChildren<Rigidbody>();
 		wildCat = GetComponent<WildCatController>();
 		inputMngr = GetComponent<InputManager>();
-		//colorStart = RightShieldObject.renderer.material.color;
+		colorStart = RightShieldObject.renderer.material.color;
 		colorEnd = new Color(colorStart.r, colorStart.g, colorStart.b, 0.0f);
 		FadeOut (dashingDirection);
 	}

@@ -8,7 +8,7 @@ public class Shield : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+		transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, YRotation, lockPos);
 	}
 	
 	// Update is called once per frame
