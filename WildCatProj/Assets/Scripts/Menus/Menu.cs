@@ -18,15 +18,29 @@ public class Menu : MonoBehaviour {
 
 	private void Start () {
 		this.TotalElements = this.MenuElements.Length;
-		this.CurrentElement = 0;
-		this.Animating = false;
+		this.CurrentElement = -1;
+		this.Animating = true;
 		dirty = true;
 		this.Ceiling.SetActive(true);
+
+		GameObject fadeText = iTween.CameraFadeAdd();
+		iTween.CameraFadeDepth(12);
+		Color ncolor = fadeText.guiTexture.color;
+		ncolor.a = 1.0f;
+		fadeText.guiTexture.color = ncolor;
+		iTween.CameraFadeTo(iTween.Hash(
+			"amount", 0.0f,
+			"time", 1.5f,
+			"easetype", iTween.EaseType.easeOutExpo
+		));
+		//			"oncompletetarget", this.gameObject,
+		//			"oncomplete", "OnStartAnimationDone"
 	}
 	
 	private void Update () {
 		int oldCurrentElement = this.CurrentElement;
 
+		if (this.CurrentElement == -1) this.CurrentElement = 0;
 		if (!this.MenuElements[this.CurrentElement].HasFocus) {
 			if (Input.GetKeyDown("d") || Input.GetKeyDown("l")) {
 				if (this.CurrentElement == (this.TotalElements - 1))
@@ -50,8 +64,9 @@ public class Menu : MonoBehaviour {
 		}
 		//selection/deselection
 		if (dirty) {
-			this.MenuElements[oldCurrentElement].Select();
-			this.MenuElements[this.CurrentElement].UnSelect();
+			this.MenuElements[this.CurrentElement ].Select();
+			if (oldCurrentElement >= 0)
+				this.MenuElements[oldCurrentElement].UnSelect();
 			this.Animating = true;
 			iTween.MoveTo(Camera.main.gameObject, iTween.Hash(
 				"position", this.MenuElements[this.CurrentElement].CameraPosition.position,
@@ -60,20 +75,18 @@ public class Menu : MonoBehaviour {
 				"looktime", 1.0f,
 				"easetype", iTween.EaseType.easeOutQuad,
 				"oncompletetarget", this.gameObject,
-				"oncomplete", "OnAnimationComplete"
+				"oncomplete", "OnTransitionDone"
 			));
 		}
 
 		this.dirty = false;
-
-		//Camera movement
-//		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, this.MenuElements[this.CurrentElement].CameraPosition.position, CameraSpeed * Time.deltaTime);
-//		this.CurrentCameraLookAt = Vector3.Lerp(this.CurrentCameraLookAt, this.MenuElements[this.CurrentElement].CameraLookAt.position, CameraLookAtSpeed * Time.deltaTime);
-//		Camera.main.transform.LookAt(this.CurrentCameraLookAt);
-//		Camera.main.transform.LookAt(this.CameraLookAtTransform.position);
 	}
 
-	private	void	OnAnimationComplete() {
+	private	void	OnTransitionDone() {
+		this.Animating = false;
+	}
+
+	private	void	OnStartAnimationDone() {
 		this.Animating = false;
 	}
 }
