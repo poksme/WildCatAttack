@@ -53,7 +53,7 @@ public class PlayMenuElement : MonoBehaviour {
 			"easetype", iTween.EaseType.easeOutQuad,
 			"oncompletetarget", this.gameObject,
 			"oncomplete", "OnSecondStepAnimationDone"
-			));
+		));
 		iTween.CameraFadeAdd();
 		iTween.CameraFadeDepth(12);
 		iTween.CameraFadeTo(iTween.Hash(
@@ -63,7 +63,7 @@ public class PlayMenuElement : MonoBehaviour {
 			"easetype", iTween.EaseType.easeInOutExpo,
 			"oncompletetarget", this.gameObject,
 			"oncomplete", "OnFadeOutDone"
-			));
+		));
 	}
 
 	private	void	OnFadeOutDone() {
@@ -72,6 +72,6 @@ public class PlayMenuElement : MonoBehaviour {
 
 	private	void	OnSecondStepAnimationDone() {
 		this.Animating = false;
-		Application.LoadLevel("cedric");
+		Application.LoadLevel("angelina");
 	}
 }

@@ -31,6 +31,18 @@ public class FollowCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+//		this.enabled = false;
+//
+		GameObject fadeText = iTween.CameraFadeAdd();
+		iTween.CameraFadeDepth(12);
+		Color ncolor = fadeText.guiTexture.color;
+		ncolor.a = 1.0f;
+		fadeText.guiTexture.color = ncolor;
+		iTween.CameraFadeTo(iTween.Hash(
+			"amount", 0.0f,
+			"time", 1.5f,
+			"easetype", iTween.EaseType.easeOutExpo
+		));
 	}
 	
 	// Update is called once per frame

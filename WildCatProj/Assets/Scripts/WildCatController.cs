@@ -237,7 +237,13 @@ public class WildCatController : MonoBehaviour {
 		curHeat = 0f;
 		// DEBUG PURPOSE
 		if (lives <= 0) {
-			Application.LoadLevel (Application.loadedLevel);
+			bool	lol = true;
+			if (lol) {
+				Application.LoadLevel ("Menu");
+			} else {
+				Application.LoadLevel (Application.loadedLevel);
+			}
+			//for now return to main menu
 		}
 	}
 }

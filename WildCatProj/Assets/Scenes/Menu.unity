@@ -18,7 +18,7 @@ RenderSettings:
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientLight: {r: .367647052, g: .367647052, b: .367647052, a: 1}
+  m_AmbientLight: {r: .0882353187, g: .0882353187, b: .0882353187, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -448,9 +448,9 @@ Light:
   serializedVersion: 3
   m_Type: 0
   m_Color: {r: .963235319, g: .945650876, b: .708261251, a: 1}
-  m_Intensity: 2.48000002
+  m_Intensity: 6.03000021
   m_Range: 12.8362923
-  m_SpotAngle: 94.3174973
+  m_SpotAngle: 101.821014
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -479,8 +479,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 71737012}
-  m_LocalRotation: {x: .813060999, y: -.185915917, z: -.150811866, w: .53068161}
-  m_LocalPosition: {x: -18.3046436, y: 2.77019787, z: -3.13390636}
+  m_LocalRotation: {x: .764433444, y: .00182414078, z: -.279008299, w: .581199348}
+  m_LocalPosition: {x: -17.9049759, y: 2.77019787, z: -3.25131631}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2005582216}
@@ -11926,8 +11926,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1388414310}
-  m_LocalRotation: {x: .156504795, y: .699418306, z: -.161342636, w: .678445935}
-  m_LocalPosition: {x: 13.7501745, y: 8.99342537, z: -5.81392002}
+  m_LocalRotation: {x: .0452712588, y: .95444268, z: -.220171988, w: .196250036}
+  m_LocalPosition: {x: -6.53928947, y: 9.69821644, z: 15.887928}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -24339,7 +24339,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 86300885527331444bbb3560db961432, type: 2}
   - {fileID: 100000, guid: 8eaa4481996180f419da5f66165caaf8, type: 2}
   - {fileID: 100000, guid: 0a0a440fa224f5841b07fe7286be9521, type: 2}
-  - {fileID: 100002, guid: 51ad0967ffd118e40b333c5ae0304142, type: 2}
+  - {fileID: 100000, guid: 86300885527331444bbb3560db961432, type: 2}
 --- !u!1 &1214084256
 GameObject:
   m_ObjectHideFlags: 0
@@ -27657,6 +27657,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 56.5851326
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7fda019b09754ac41a8871effecffe3a, type: 2}
+      propertyPath: BrokenWildCats.Array.data[4]
+      value: 
+      objectReference: {fileID: 100000, guid: 86300885527331444bbb3560db961432, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fda019b09754ac41a8871effecffe3a, type: 2}
   m_RootGameObject: {fileID: 162435771}
@@ -33754,6 +33758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashTimerMax: .150000006
   dashStrength: 30
+  shieldObject: {fileID: 0}
 --- !u!114 &1660453208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36090,6 +36095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashTimerMax: .150000006
   dashStrength: 30
+  shieldObject: {fileID: 0}
 --- !u!114 &1774170135
 MonoBehaviour:
   m_ObjectHideFlags: 0

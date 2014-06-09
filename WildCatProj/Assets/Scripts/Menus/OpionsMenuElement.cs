@@ -77,7 +77,7 @@ public class OpionsMenuElement : MonoBehaviour {
 			"easetype", iTween.EaseType.easeOutQuad,
 			"oncompletetarget", this.gameObject,
 			"oncomplete", "OnCameraSetupAnimationDone"
-			));
+		));
 	}
 
 	private	void	UnFocusMonitor() {
@@ -92,7 +92,7 @@ public class OpionsMenuElement : MonoBehaviour {
 			"easetype", iTween.EaseType.easeOutQuad,
 			"oncompletetarget", this.gameObject,
 			"oncomplete", "OnCameraUnSetupAnimationDone"
-			));
+		));
 	}
 
 	private	void	OnMoveSwitchAnimationDone() {
