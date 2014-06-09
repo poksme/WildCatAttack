@@ -42,8 +42,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: -.694304168, y: -1.59493027e-07, z: -1.75265185e-07, w: .71968174}
-  m_LocalPosition: {x: 1.84719045e-06, y: .453593433, z: .000980378129}
+  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: 1.8951531e-06, y: .0573396869, z: .000980449026}
   m_LocalScale: {x: 1, y: 1, z: .250501722}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: -.70594281, z: 0, w: .708268821}
-  m_LocalPosition: {x: .00955221243, y: -.258551747, z: -.0208679587}
+  m_LocalPosition: {x: .00955217704, y: -.0300697852, z: -.0208679605}
   m_LocalScale: {x: .542478025, y: .511581481, z: .25067991}
   m_Children:
   - {fileID: 400000}
@@ -255,7 +255,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4282861383
       minMaxState: 0
     startSize:
       scalar: 14.3999996
@@ -1305,7 +1305,7 @@ ParticleSystem:
         rgba: 4284835173
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: 1.10000002
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1381,11 +1381,11 @@ ParticleSystem:
     angle: 25
     length: 5
     boxX: 1.08000004
-    boxY: 1.29999995
-    boxZ: 3.69000006
+    boxY: .25999999
+    boxZ: 2.66000009
     placementMode: 0
     m_Mesh: {fileID: 0}
-    randomDirection: 0
+    randomDirection: 1
   EmissionModule:
     enabled: 1
     m_Type: 0
@@ -1440,14 +1440,14 @@ ParticleSystem:
         m_Curve:
         - time: 0
           value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
+          inSlope: -1
+          outSlope: -1
+          tangentMode: 10
         - time: 1
-          value: .197740138
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
+          value: 0
+          inSlope: -1
+          outSlope: -1
+          tangentMode: 10
         m_PreInfinity: 2
         m_PostInfinity: 2
       minCurve:
@@ -1467,22 +1467,22 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 1
   RotationModule:
-    enabled: 0
+    enabled: 1
     curve:
-      scalar: .785398185
+      scalar: .785398126
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
           value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
+          inSlope: -1
+          outSlope: -1
+          tangentMode: 10
         - time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
+          value: 0
+          inSlope: -1
+          outSlope: -1
+          tangentMode: 10
         m_PreInfinity: 2
         m_PostInfinity: 2
       minCurve:
@@ -1500,7 +1500,7 @@ ParticleSystem:
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 0
+      minMaxState: 1
   ColorModule:
     enabled: 0
     gradient:
@@ -1995,10 +1995,10 @@ ParticleSystem:
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-        - time: .994594574
-          value: .807909608
-          inSlope: 0
-          outSlope: 0
+        - time: 1
+          value: 0
+          inSlope: -2
+          outSlope: -2
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -2020,9 +2020,9 @@ ParticleSystem:
       minMaxState: 1
     range: {x: 0, y: 5}
   RotationBySpeedModule:
-    enabled: 0
+    enabled: 1
     curve:
-      scalar: .785398185
+      scalar: .785398126
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2032,7 +2032,7 @@ ParticleSystem:
           outSlope: 0
           tangentMode: 0
         - time: 1
-          value: 1
+          value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2053,7 +2053,7 @@ ParticleSystem:
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 0
+      minMaxState: 1
     range: {x: 0, y: 1}
   ColorBySpeedModule:
     enabled: 0
