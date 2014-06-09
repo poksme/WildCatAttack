@@ -14,6 +14,6 @@ public class DestroyObjectAreaBehaviour : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider obj) {
-		Destroy(obj.gameObject);
+		Destroy(obj.transform.root.gameObject);
 	}
 }
