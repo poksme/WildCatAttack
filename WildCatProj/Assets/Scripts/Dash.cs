@@ -20,10 +20,13 @@ public class Dash : MonoBehaviour {
 	WildCatController wildCat;
 
 	//Shield effect
-	public GameObject shieldObject;
+	public GameObject RightShieldObject;
+	public GameObject LeftShieldObject;
 	private Color colorStart;
 	private Color colorEnd;
-	private float fadeDuration = 100.0f;
+	private float fadeDuration = 0.5f;
+	private float rightCurrentFadeTime = 0.5f;
+	private float leftCurrentFadeTime = 0.5f;
 
 	public bool IsDashing {
 		get {
@@ -42,11 +45,9 @@ public class Dash : MonoBehaviour {
 		rigidBodies = gameObject.GetComponentsInChildren<Rigidbody>();
 		wildCat = GetComponent<WildCatController>();
 		inputMngr = GetComponent<InputManager>();
-		if (shieldObject == null)
-			Debug.Log ("Shield Object is not set");
-		colorStart = shieldObject.renderer.material.color;
+		//colorStart = RightShieldObject.renderer.material.color;
 		colorEnd = new Color(colorStart.r, colorStart.g, colorStart.b, 0.0f);
-		FadeOut();
+		FadeOut (dashingDirection);
 	}
 
 	private void StartDashTimer() {
@@ -73,6 +74,26 @@ public class Dash : MonoBehaviour {
 			StartDash(inputMngr.DoubleTapVector);
 			dashingDirection = inputMngr.DoubleTapDirection;
 		}
+
+		if (dashTimerIsActive && dashingDirection == InputManager.Direction.Right)
+			RightShieldObject.SetActive(true);
+		else if (!dashTimerIsActive && rightCurrentFadeTime >= fadeDuration)
+			RightShieldObject.SetActive(false);
+
+		if (dashTimerIsActive && dashingDirection == InputManager.Direction.Left)
+			LeftShieldObject.SetActive(true);
+		else if (!dashTimerIsActive && leftCurrentFadeTime >= fadeDuration)
+			LeftShieldObject.SetActive(false);
+
+		//FadeOut the Shield if not active
+		if (!dashTimerIsActive && rightCurrentFadeTime < fadeDuration) {
+			RightShieldObject.renderer.material.color = Color.Lerp (colorStart, colorEnd, rightCurrentFadeTime/fadeDuration);
+			rightCurrentFadeTime += Time.deltaTime;
+		}
+		if (!dashTimerIsActive && leftCurrentFadeTime < fadeDuration) {
+			LeftShieldObject.renderer.material.color = Color.Lerp (colorStart, colorEnd, leftCurrentFadeTime/fadeDuration);
+			leftCurrentFadeTime += Time.deltaTime;
+		}
 	}
 
 	// Applies a force on all the children rigidbodies
@@ -80,9 +101,7 @@ public class Dash : MonoBehaviour {
 		foreach (Rigidbody rb in rigidBodies)
 			rb.AddForce(direction * dashStrength, ForceMode.Impulse);
 		wildCat.AddHeat();
-		//shieldObject.SetActive(true);
-		//FadeShield(100f,2.0f);
-		FadeIn();
+		FadeIn(dashingDirection);
 	}
 
 	// Set the velocity to 0 to all the children rigidbodies
@@ -91,23 +110,36 @@ public class Dash : MonoBehaviour {
 			if (!rb.isKinematic)
 				rb.velocity = Vector3.zero;
 		}
-		//shieldObject.SetActive(false);
-		//FadeShield(100f,0.3f);
-		FadeOut();
 	}
 
-	void FadeOut ()
+	void FadeOut (InputManager.Direction direction)
 	{
 		for (float t = 0.0f; t < fadeDuration; t += Time.deltaTime) {
-			shieldObject.renderer.material.color = Color.Lerp (colorStart, colorEnd, t/fadeDuration);
+			if (direction == InputManager.Direction.Right)
+				RightShieldObject.renderer.material.color = Color.Lerp (colorStart, colorEnd, t/fadeDuration);
+			else if (direction == InputManager.Direction.Left)
+				LeftShieldObject.renderer.material.color = Color.Lerp (colorStart, colorEnd, t/fadeDuration);
+			else {
+				RightShieldObject.renderer.material.color = Color.Lerp (colorStart, colorEnd, t/fadeDuration);
+				LeftShieldObject.renderer.material.color = Color.Lerp (colorStart, colorEnd, t/fadeDuration);
+			}
+
 		}
 	}
 
-	void FadeIn ()
+	void FadeIn (InputManager.Direction direction)
 	{
 		for (float t = 0.0f; t < fadeDuration; t += Time.deltaTime) {
-			shieldObject.renderer.material.color = Color.Lerp (colorEnd, colorStart, t/fadeDuration);
+			if (direction == InputManager.Direction.Right)
+				RightShieldObject.renderer.material.color = Color.Lerp (colorEnd, colorStart, t/fadeDuration);
+			else if (direction == InputManager.Direction.Left)
+				LeftShieldObject.renderer.material.color = Color.Lerp (colorEnd, colorStart, t/fadeDuration);
+			else {
+				RightShieldObject.renderer.material.color = Color.Lerp (colorEnd, colorStart, t/fadeDuration);
+			}
 		}
+		rightCurrentFadeTime = 0f;
+		leftCurrentFadeTime = 0f;
 	}
 
 }

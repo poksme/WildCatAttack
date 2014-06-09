@@ -4,6 +4,7 @@ using System.Collections;
 public class Shield : MonoBehaviour {
 
     float				lockPos = 0;
+	public float		YRotation;
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +13,6 @@ public class Shield : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, 180, lockPos);
+		transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, YRotation, lockPos);
 	}
 }
