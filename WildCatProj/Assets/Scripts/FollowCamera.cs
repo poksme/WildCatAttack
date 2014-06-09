@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (Camera))]
 public class FollowCamera : MonoBehaviour {
 
 	[SerializeField] private Transform BoundsPlayer1Left;
@@ -14,7 +15,7 @@ public class FollowCamera : MonoBehaviour {
 	[SerializeField] private float ZoomingSmoothingStep = 10f;
 
 	[SerializeField] private float minPan = 0f;
-	[SerializeField] private float maxPan = 100f;
+	[SerializeField] private float maxPan = 1000f;
 	[SerializeField] private float panStep = 0.5f;
 	[SerializeField] private float PanningSmoothingStep = 10f;
 
@@ -43,6 +44,7 @@ public class FollowCamera : MonoBehaviour {
 			"time", 1.5f,
 			"easetype", iTween.EaseType.easeOutExpo
 		));
+		this.camera.fieldOfView = 18;
 	}
 	
 	// Update is called once per frame
@@ -77,7 +79,7 @@ public class FollowCamera : MonoBehaviour {
 	
 	private void panCamera() {
 		Vector3 panBck = transform.position;
-		transform.position = new Vector3(transform.position.x, transform.position.y, minPan);
+		transform.position = new Vector3(transform.position.x, transform.position.y, -minPan);
 		planes =  GeometryUtility.CalculateFrustumPlanes(this.camera);
 		while (!seeBothPlayers() && transform.position.z > -maxPan) {
 			planes =  GeometryUtility.CalculateFrustumPlanes(this.camera);
