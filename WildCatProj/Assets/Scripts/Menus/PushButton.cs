@@ -8,7 +8,7 @@ public class PushButton : MonoBehaviour {
 	public	void		Push() {
 		this.GetComponent<Animator>().SetTrigger("Push");
 		if (this.PushSound) {
-			AudioSource.PlayClipAtPoint(this.PushSound, this.transform.position);
+			SoundChannelManager.GetInstance().PlayClipAtPoint(this.PushSound, this.transform);
 		}
 	}
 }

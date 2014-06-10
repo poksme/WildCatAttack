@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SoundChannelManager
-{
+public class SoundChannelManager {
+
 	private static SoundChannelManager instance = null;
 	private AudioSource[] audioSources;
 	private const int channelNbr = 8;

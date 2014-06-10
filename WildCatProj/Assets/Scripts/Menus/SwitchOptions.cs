@@ -25,6 +25,6 @@ public class SwitchOptions : MonoBehaviour {
 			eulerAngles.y = -50;
 		}
 		this.Switch.transform.eulerAngles = eulerAngles;
-		if (playSound) AudioSource.PlayClipAtPoint(this.ToggleSound, this.transform.position);
+		if (playSound) SoundChannelManager.GetInstance().PlayClipAtPoint(this.ToggleSound, this.transform);
 	}
 }

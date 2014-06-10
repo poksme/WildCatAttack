@@ -1,41 +1,20 @@
 fileFormatVersion: 2
-guid: 7d64976db31e91048b6ebad8e33b15fd
+guid: e838fa824cbd72a438349add4e88b238
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: background
-    100002: Exit
-    100004: Exit_Panel
-    100006: //RootNode
-    100008: Geen
-    100010: Geen1
-    100012: glass
-    100014: Polyg
-    100016: Polyg1
-    100018: Polygon
-    100020: Sky
-    100022: Sky-light
-    400000: background
-    400002: Exit
-    400004: Exit_Panel
-    400006: //RootNode
-    400008: Geen
-    400010: Geen1
-    400012: glass
-    400014: Polyg
-    400016: Polyg1
-    400018: Polygon
-    400020: Sky
-    400022: Sky-light
-    2300000: Polyg
-    2300002: Polyg1
-    2300004: Polygon
-    3300000: Polyg
-    3300002: Polyg1
-    3300004: Polygon
-    4300000: Polygon
-    4300002: Polyg
-    4300004: Polyg1
+    100000: Box001
+    100002: //RootNode
+    100004: Text001
+    400000: Box001
+    400002: //RootNode
+    400004: Text001
+    2300000: Box001
+    2300002: Text001
+    3300000: Box001
+    3300002: Text001
+    4300000: Box001
+    4300002: Text001
     9500000: //RootNode
   materials:
     importMaterials: 1
