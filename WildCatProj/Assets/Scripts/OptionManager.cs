@@ -6,6 +6,9 @@ public class OptionManager
 	private static OptionManager instance = null;
 	private bool soundMuted = false;
 	private bool musicMuted = false;
+	//GameModes
+	private bool snowMode = false;
+	private bool windMode = false;
 
 	public bool musicIsMuted {
 		set { 
@@ -18,6 +21,16 @@ public class OptionManager
 	public bool soundIsMuted { 
 		get { return soundMuted; }
 		set { soundMuted = value; }
+	}
+
+	public bool snowModeActivated { 
+		get { return snowMode; }
+		set { snowMode = value; }
+	}
+
+	public bool windModeActivated { 
+		get { return windMode; }
+		set { windMode = value; }
 	}
 
 	public static OptionManager GetInstance() {
