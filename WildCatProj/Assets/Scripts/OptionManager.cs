@@ -7,7 +7,7 @@ public class OptionManager
 	private bool soundMuted = false;
 	private bool musicMuted = false;
 	//GameModes
-	private bool snowMode = false;
+	private bool snowMode = true;
 	private bool windMode = false;
 
 	public bool musicIsMuted {
