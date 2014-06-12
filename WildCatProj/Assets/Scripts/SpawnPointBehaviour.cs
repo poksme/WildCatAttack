@@ -10,10 +10,6 @@ public class SpawnPointBehaviour : MonoBehaviour {
 	void Start () {
 		InvokeRepeating ("SpawnObject", 0, 5);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
 
 	void SpawnObject() {
 		Instantiate(BrokenWildCats[(Random.Range(0, BrokenWildCats.Count))], this.transform.position, Random.rotation);

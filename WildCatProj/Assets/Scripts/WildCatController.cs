@@ -245,7 +245,7 @@ public class WildCatController : MonoBehaviour {
 		curHeat = 0f;
 		// DEBUG PURPOSE
 		if (lives <= 0) {
-			bool	lol = true;
+			bool	lol = false;
 			if (lol) {
 				Application.LoadLevel ("Menu");
 			} else {
