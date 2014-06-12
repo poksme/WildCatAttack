@@ -107,7 +107,7 @@ public class WildCatController : MonoBehaviour {
 		UpdateHingeJoints();
 		// FOR DEBUG PURPOSE
 		if (Input.GetKeyDown(KeyCode.Escape)) {
-			Application.LoadLevel (Application.loadedLevel);
+			Application.LoadLevel("Menu");
 		}
 		// FOR DEBUG PURPOSE
 		DecreaseHeat();
