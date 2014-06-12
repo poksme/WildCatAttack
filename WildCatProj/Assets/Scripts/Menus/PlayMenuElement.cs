@@ -72,6 +72,6 @@ public class PlayMenuElement : MonoBehaviour {
 
 	private	void	OnSecondStepAnimationDone() {
 		this.Animating = false;
-		Application.LoadLevel("angelina");
+		Application.LoadLevel("Game");
 	}
 }

@@ -34,7 +34,7 @@ GameObject:
   - 59: {fileID: 5900000}
   m_Layer: 0
   m_Name: FrontForeArm
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +49,7 @@ GameObject:
   - 4: {fileID: 400014}
   m_Layer: 0
   m_Name: LeftSide
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ GameObject:
   - 4: {fileID: 400016}
   m_Layer: 0
   m_Name: RightSide
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ GameObject:
   - 59: {fileID: 5900002}
   m_Layer: 0
   m_Name: BackArm
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   - 59: {fileID: 5900004}
   m_Layer: 0
   m_Name: FrontArm
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +124,7 @@ GameObject:
   - 59: {fileID: 5900006}
   m_Layer: 0
   m_Name: BackForeArm
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ GameObject:
   - 59: {fileID: 5900008}
   m_Layer: 0
   m_Name: FrontForeArm
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,7 +164,7 @@ GameObject:
   - 59: {fileID: 5900010}
   m_Layer: 0
   m_Name: BackArm
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,7 +184,7 @@ GameObject:
   - 59: {fileID: 5900012}
   m_Layer: 0
   m_Name: FrontArm
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,7 +204,7 @@ GameObject:
   - 59: {fileID: 5900014}
   m_Layer: 0
   m_Name: BackForeArm
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +242,7 @@ GameObject:
   - 135: {fileID: 13500002}
   m_Layer: 0
   m_Name: Feet
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +261,7 @@ GameObject:
   - 135: {fileID: 13500004}
   m_Layer: 0
   m_Name: Feet
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,7 +280,7 @@ GameObject:
   - 135: {fileID: 13500006}
   m_Layer: 0
   m_Name: Feet
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,7 +296,7 @@ GameObject:
   - 65: {fileID: 6500018}
   m_Layer: 0
   m_Name: CameraBoundLeft
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -315,7 +315,7 @@ GameObject:
   - 65: {fileID: 6500000}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -331,7 +331,7 @@ GameObject:
   - 65: {fileID: 6500020}
   m_Layer: 0
   m_Name: CameraBoundRight
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -431,7 +431,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.93227696, y: .604341984, z: -3.75997162}
+  m_LocalPosition: {x: -14.1520729, y: -.980003357, z: -1.68913388}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400032}
@@ -960,7 +960,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: e0aa485bd7479be4da84ed342d3b09cb, type: 2}
+  - {fileID: 2100000, guid: b21bd7e563221074f8398c5233e7f51d, type: 2}
   - {fileID: 2100000, guid: adb4d173ef5c32842a4490c6f894ffc8, type: 2}
   - {fileID: 2100000, guid: a20f93b687d73ef4eb7f8aedd2416623, type: 2}
   - {fileID: 2100000, guid: 010e196f5335c344385d027c39110b09, type: 2}
@@ -1272,7 +1272,7 @@ HingeJoint:
   m_Anchor: {x: .00999999978, y: -.0199999996, z: .0700000003}
   m_Axis: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169928238, y: -.0717205629, z: -.238696158}
+  m_ConnectedAnchor: {x: -.169928193, y: -.0717205629, z: -.238696188}
   m_UseSpring: 1
   m_Spring:
     spring: 20
@@ -1301,7 +1301,7 @@ HingeJoint:
   m_Anchor: {x: .00999999978, y: -.0199999996, z: .0700000003}
   m_Axis: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: .196523458, y: -.0717205852, z: .219751626}
+  m_ConnectedAnchor: {x: .196523502, y: -.0717205927, z: .219751626}
   m_UseSpring: 1
   m_Spring:
     spring: 20
@@ -1330,7 +1330,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: .0549999997}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0246880632, y: .0127980076, z: -.0976622179}
+  m_ConnectedAnchor: {x: -.0246880632, y: .0127980309, z: -.0976622254}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -1388,7 +1388,7 @@ HingeJoint:
   m_Anchor: {x: .00999999978, y: -.0199999996, z: .0700000003}
   m_Axis: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.169928387, y: -.0717205927, z: .219742313}
+  m_ConnectedAnchor: {x: -.169928342, y: -.0717205927, z: .219742313}
   m_UseSpring: 1
   m_Spring:
     spring: 20
@@ -1417,7 +1417,7 @@ HingeJoint:
   m_Anchor: {x: .00999999978, y: -.0199999996, z: .0700000003}
   m_Axis: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: .196523681, y: -.0717205331, z: -.239916608}
+  m_ConnectedAnchor: {x: .196523651, y: -.0717205405, z: -.239916638}
   m_UseSpring: 1
   m_Spring:
     spring: 20
@@ -1446,7 +1446,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: .0549999997}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0195883326, y: .0127982385, z: -.0976622775}
+  m_ConnectedAnchor: {x: -.0195883326, y: .0127982162, z: -.0976622701}
   m_UseSpring: 1
   m_Spring:
     spring: 185
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   DashCost: 33
   heatBar: {fileID: 0}
   maxTubeTransparency: .5
-  lives: 3
+  lives: 4
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1803,7 +1803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashTimerMax: .150000006
-  dashStrength: 30
+  dashStrength: 45
   RightShieldObject: {fileID: 100036}
   LeftShieldObject: {fileID: 100042}
 --- !u!114 &11400004

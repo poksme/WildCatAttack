@@ -15,7 +15,10 @@ public class DeathZoneBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if (other.CompareTag("Player1") || other.CompareTag("Player2")) {
-			other.transform.root.gameObject.GetComponent<WildCatController>().Die();
+			WildCatController deadPlayer = other.transform.root.gameObject.GetComponent<WildCatController>();
+			if (deadPlayer) {
+				deadPlayer.Die();
+			}
 		}
 	}
 }
