@@ -34,6 +34,12 @@ public class FollowCamera : MonoBehaviour {
 	void Start () {
 //		this.enabled = false;
 //
+
+		//sound logic
+		if (OptionManager.GetInstance().musicIsMuted == false) {
+			SoundChannelManager.GetInstance().playMusic();
+		}
+
 		GameObject fadeText = iTween.CameraFadeAdd();
 		iTween.CameraFadeDepth(12);
 		Color ncolor = fadeText.guiTexture.color;

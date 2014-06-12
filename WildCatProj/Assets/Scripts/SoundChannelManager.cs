@@ -6,6 +6,7 @@ public class SoundChannelManager {
 	private static SoundChannelManager instance = null;
 	private AudioSource[] audioSources;
 	private const int channelNbr = 8;
+	private AudioSource musicPlayer;
 		
 	public static SoundChannelManager GetInstance() {
 		if (instance == null) {
@@ -41,11 +42,42 @@ public class SoundChannelManager {
 		}
 	}
 
+	private bool tryGetMusicPlayer() {
+		if (!musicPlayer) {
+			GameObject tmpObj = GameObject.Find("MusicPlayer");
+			if (!tmpObj) {
+				Debug.LogWarning("There is no game object Named MusicPlayer in this scene");
+				return false;
+			} else {
+				musicPlayer = tmpObj.GetComponent<AudioSource>();
+				if (!musicPlayer) {
+					Debug.LogWarning("The game object Named MusicPlayer has no AudioSource");
+					return false;
+				} else {
+					Debug.Log ("Music Player is is set.");
+				}
+			}
+		}
+		return true;
+	}
+
 	public void playMusic(bool loop = true) {
-		throw new System.NotImplementedException ();
+		if (tryGetMusicPlayer()) {
+			musicPlayer.loop = loop;
+			musicPlayer.Play();
+		}
 	}
 
 	public void setMusicVolume (float s) {
-		throw new System.NotImplementedException ();
+		if (tryGetMusicPlayer()) {
+			musicPlayer.volume = s;
+		}
+	}
+
+	public void setSfxVolume (float s)
+	{
+		for (int i = 0; i < channelNbr; i++) {
+			audioSources[i].volume = s;
+		}
 	}
 }

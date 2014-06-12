@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class GameModes : MonoBehaviour {
-
 	OptionManager options; 
 	private	Object[]	allObjects;
 	public GameObject	floor;
@@ -17,7 +16,7 @@ public class GameModes : MonoBehaviour {
 		}
 
 		if (options.windModeActivated) {
-			objects = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
+		//	objects = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
 		}
 	}
 	
