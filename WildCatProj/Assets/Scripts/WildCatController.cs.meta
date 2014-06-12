@@ -2,7 +2,18 @@ fileFormatVersion: 2
 guid: b240b2385257c85488fb308fad59b2cb
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hitSFX: {instanceID: 0}
+  - flySFX: {instanceID: 0}
+  - lowHitSFX: {instanceID: 0}
+  - leftFrontHinge: {instanceID: 0}
+  - leftBackHinge: {instanceID: 0}
+  - rightFrontHinge: {instanceID: 0}
+  - rightBackHinge: {instanceID: 0}
+  - hingeUnfold: {instanceID: 0}
+  - hingeFold: {instanceID: 0}
+  - heatBar: {instanceID: 0}
+  - HeartPrefab: {fileID: 100000, guid: 87cfdda69917460428447ae359b53eb4, type: 2}
   executionOrder: 200
   icon: {instanceID: 0}
   userData: 

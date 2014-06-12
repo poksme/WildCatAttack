@@ -45,6 +45,7 @@ public class WildCatController : MonoBehaviour {
 
 	// Life logic
 	[SerializeField]private int lives = 3;
+	[SerializeField]private GameObject HeartPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -83,6 +84,12 @@ public class WildCatController : MonoBehaviour {
 			x =3.15f;
 		}
 		for (int i = 0; i < lives; i++) {
+			// old y -6.650559f
+			GameObject heart = (GameObject)Instantiate(HeartPrefab, new Vector3(x - delta / (lives - 1) * i, -7f, -7.264833f), Quaternion.Euler(-60, 0, 0));
+			heart.layer = LayerMask.NameToLayer("HUD");
+			heart.transform.localScale = new Vector3(25f, 25f, 25f);
+			lifeIcons[i] = heart;
+			/*
 			GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 			sphere.layer = LayerMask.NameToLayer("HUD");
 			sphere.transform.position = new Vector3(x - delta / (lives - 1) * i, -6.650559f, -7.264833f);
@@ -91,6 +98,7 @@ public class WildCatController : MonoBehaviour {
 			sphere.renderer.material.SetColor("_Color", new Color(0.7f, 0, 0));
 			sphere.renderer.material.SetColor("_SpecColor", new Color(1f, 0.7f, 0.7f));
 			lifeIcons[i] = sphere;
+			*/
 		}
 	}
 	
